@@ -9,3 +9,5 @@ To setup and start application run
 4) open on http://localhost:5100
 
 To check all existing routes you can run 'rails routes' from console
+
+You can fill the database with some data by running 'rails db:seed' from console
