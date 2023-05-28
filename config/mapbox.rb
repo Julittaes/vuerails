@@ -1,0 +1,1 @@
+ENV["MAPBOX_ACCESS_TOKEN"] = "pk.eyJ1IjoiaXJpbmFzayIsImEiOiJjbDIwOHhrbm0wdWJlM2pxZDNvN3A5NHNzIn0.M37Dun7-7tjVc9C0O82lpw"

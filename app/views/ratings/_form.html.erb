@@ -1,0 +1,32 @@
+<%= form_with(model: rating) do |form| %>
+  <% if rating.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(rating.errors.count, "error") %> prohibited this rating from being saved:</h2>
+
+      <ul>
+        <% rating.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :avg_rating, style: "display: block" %>
+    <%= form.text_field :avg_rating %>
+  </div>
+
+  <div>
+    <%= form.label :location_rating, style: "display: block" %>
+    <%= form.text_field :location_rating %>
+  </div>
+
+  <div>
+    <%= form.label :facilities_rating, style: "display: block" %>
+    <%= form.text_field :facilities_rating %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

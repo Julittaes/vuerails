@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Properties</h1>
+
+<div id="properties">
+  <% @properties.each do |property| %>
+    <%= render property %>
+    <p>
+      <%= js_map [{latitude: 37.7829, longitude: -122.4190}] %>
+      <%= link_to "Show this property", property %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New property", new_property_path %>
