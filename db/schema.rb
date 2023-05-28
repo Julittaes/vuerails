@@ -51,8 +51,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_101824) do
   create_table "ratings", force: :cascade do |t|
     t.bigint "property_id"
     t.float "location_rating"
-    t.float "facilities_rating"
-    t.float "avg_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["property_id"], name: "index_ratings_on_property_id"
