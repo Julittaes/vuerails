@@ -12,6 +12,7 @@ Account.create!([{
   last_name: "Izumoshi",
   email: "tanaka@izumo.com"
 }])
+Account.first.save
 p "Created #{Account.count} Accounts"
 
 
@@ -22,9 +23,9 @@ Property.create!([{
   rooms: 2,
   bathrooms: 1,
   photo: nil,
-  avg_rating: 8,
   account_id: Account.first.id
 }])
+Property.first.save
 p "Created #{Property.count} Properties"
 
 Location.destroy_all
@@ -33,4 +34,14 @@ Location.create!([{
   address: "1690-4 Imaichichō, Izumo, Shimane 693-0001",
   property_id: Property.first.id
 }])
+Location.first.save
 p "Created #{Location.count} Locations"
+
+Rating.destroy_all
+Rating.create!([{
+  property_id: Property.first.id,
+  location_rating: 8.0
+}])
+Rating.first.save
+p "Created #{Rating.count} Ratings"
+

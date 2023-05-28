@@ -42,7 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_101824) do
     t.integer "rooms"
     t.integer "bathrooms"
     t.string "photo"
-    t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_properties_on_account_id"
