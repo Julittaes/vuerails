@@ -1,5 +1,8 @@
+require 'http'
+
 class PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show edit update destroy ]
+  after_action :set_fake_coordinate, only: %i[ create ]
 
   # GET /properties
   def index
@@ -14,6 +17,16 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   def new
     @property = Property.new
+  end
+
+  def set_fake_coordinate
+    if @property.latitude.present?
+      @property.fake_latitude = @property.latitude + 0.003
+      @property.fake_longitude = @property.longitude + 0.003
+      @property.save
+    else
+      render json: @property.errors, status: :unprocessable_entity
+    end
   end
 
   # GET /properties/1/edit
@@ -51,6 +64,11 @@ class PropertiesController < ApplicationController
     # redirect_to properties_url, notice: "Property was successfully destroyed.", status: :see_other
   end
 
+  # def rating_count
+  #   @rating = HTTP.get("https://api.mapbox.com/search/v1/forward/%E3%82%AF%E3%83%AA%E3%83%8B%E3%83%83%E3%82%AF?language=ja&limit=50&proximity=132.754883,35.366889&bbox=132.74488300000002,35.356889,132.764883,35.376889&country=JP&access_token=pk.eyJ1IjoiaXJpbmFzayIsImEiOiJjbDIwOHhrbm0wdWJlM2pxZDNvN3A5NHNzIn0.M37Dun7-7tjVc9C0O82lpw").to_s
+  #   # HTTP.get("https://github.com").to_s
+  # end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_property
@@ -59,6 +77,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:title, :price, :rooms, :bathrooms, :photo, :address, :longitude, :latitude)
+      params.require(:property).permit(:title, :price, :rooms, :bathrooms, :avatar, :address, :longitude, :latitude, :account_id)
     end
 end

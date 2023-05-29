@@ -25,6 +25,14 @@ gem "jbuilder"
 
 gem 'geocoder'
 
+gem "image_processing", ">= 1.2"
+
+gem 'ruby-vips'
+
+gem 'mini_magick'
+
+gem 'http'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
@@ -38,3 +46,7 @@ group :development do
   # gem "spring"
 end
 
+
+gem "dockerfile-rails", ">= 1.4", :group => :development
+
+gem "redis", "~> 5.0"

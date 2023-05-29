@@ -22,8 +22,8 @@
   </div>
 
   <div>
-    <%= form.label :roomms, style: "display: block" %>
-    <%= form.number_field :roomms %>
+    <%= form.label :rooms, style: "display: block" %>
+    <%= form.number_field :rooms %>
   </div>
 
   <div>
@@ -32,13 +32,28 @@
   </div>
 
   <div>
-    <%= form.label :photo, style: "display: block" %>
-    <%= form.text_field :photo %>
+    <%= form.label :avatar, style: "display: block" %>
+    <%= form.file_field :avatar %>
   </div>
 
   <div>
-    <%= form.label :avg_rating, style: "display: block" %>
-    <%= form.text_field :avg_rating %>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.label :latitude, style: "display: block" %>
+    <%= form.number_field :latitude %>
+  </div>
+
+  <div>
+    <%= form.label :longitude, style: "display: block" %>
+    <%= form.number_field :longitude %>
+  </div>
+
+  <div>
+    <%= form.label :account_id, style: "display: block" %>
+    <%= form.number_field :account_id %>
   </div>
 
   <div>

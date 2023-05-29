@@ -7,5 +7,6 @@
     "@vitejs/plugin-vue": "^4.2.3",
     "mapkick": "^0.2.5",
     "vue": "3.2.33"
-  }
+  },
+  "packageManager": "yarn@1.22.19"
 }
