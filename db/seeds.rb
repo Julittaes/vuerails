@@ -23,19 +23,11 @@ Property.create!([{
   rooms: 2,
   bathrooms: 1,
   photo: nil,
+  address: "1690-4 Imaichichō, Izumo, Shimane 693-0001",
   account_id: Account.first.id
 }])
 Property.first.save
 p "Created #{Property.count} Properties"
-
-Location.destroy_all
-Location.create!([{
-  name: "Tanaka-san house",
-  address: "1690-4 Imaichichō, Izumo, Shimane 693-0001",
-  property_id: Property.first.id
-}])
-Location.first.save
-p "Created #{Location.count} Locations"
 
 Rating.destroy_all
 Rating.create!([{
