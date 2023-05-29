@@ -7,6 +7,9 @@ class CreateProperties < ActiveRecord::Migration[7.0]
       t.integer :rooms
       t.integer :bathrooms
       t.string :photo
+      t.string :address
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end

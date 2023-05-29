@@ -3,7 +3,7 @@
 one:
   title: MyString
   price: 1.5
-  roomms: 1
+  rooms: 1
   bathrooms: 1
   photo: MyString
   avg_rating: 1.5
@@ -11,7 +11,7 @@ one:
 two:
   title: MyString
   price: 1.5
-  roomms: 1
+  rooms: 1
   bathrooms: 1
   photo: MyString
   avg_rating: 1.5

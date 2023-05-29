@@ -75,6 +75,7 @@ GEM
       reline (>= 0.3.1)
     dry-cli (1.0.0)
     erubi (1.12.0)
+    geocoder (1.8.1)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.13.0)
@@ -180,6 +181,7 @@ PLATFORMS
 
 DEPENDENCIES
   debug
+  geocoder
   importmap-rails
   jbuilder
   mapkick-rb

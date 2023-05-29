@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_28_101824) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_29_010928) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,19 +22,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_101824) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "locations", force: :cascade do |t|
-    t.bigint "property_id"
-    t.string "name"
-    t.string "address"
-    t.float "latitude"
-    t.float "longitude"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["latitude"], name: "index_locations_on_latitude"
-    t.index ["longitude"], name: "index_locations_on_longitude"
-    t.index ["property_id"], name: "index_locations_on_property_id"
-  end
-
   create_table "properties", force: :cascade do |t|
     t.bigint "account_id"
     t.string "title"
@@ -42,6 +29,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_101824) do
     t.integer "rooms"
     t.integer "bathrooms"
     t.string "photo"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["account_id"], name: "index_properties_on_account_id"
