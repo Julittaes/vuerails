@@ -1,1 +1,22 @@
-{}
+{
+  "entrypoints/App.vue": {
+    "file": "assets/App-bf477b06.vue",
+    "src": "entrypoints/App.vue"
+  },
+  "entrypoints/assets/logo.svg": {
+    "file": "assets/logo-da9b9095.svg",
+    "src": "entrypoints/assets/logo.svg"
+  },
+  "entrypoints/components/TheSidebar.vue": {
+    "file": "assets/TheSidebar-1e6bc8a0.vue",
+    "src": "entrypoints/components/TheSidebar.vue"
+  },
+  "entrypoints/components/TheWelcome.vue": {
+    "file": "assets/TheWelcome-5124b1e1.vue",
+    "src": "entrypoints/components/TheWelcome.vue"
+  },
+  "entrypoints/components/searchButton.vue": {
+    "file": "assets/searchButton-145b5f0e.vue",
+    "src": "entrypoints/components/searchButton.vue"
+  }
+}
