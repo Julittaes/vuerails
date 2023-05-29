@@ -1,7 +1,58 @@
 {
+  "App.vue": {
+    "file": "assets/App-bf477b06.vue",
+    "src": "App.vue"
+  },
+  "TheSidebar.vue": {
+    "file": "assets/TheSidebar-1e6bc8a0.vue",
+    "src": "TheSidebar.vue"
+  },
+  "TheWelcome.vue": {
+    "file": "assets/TheWelcome-5124b1e1.vue",
+    "src": "TheWelcome.vue"
+  },
+  "entrypoints/application.css": {
+    "file": "assets/application-030fb3de.css",
+    "src": "entrypoints/application.css"
+  },
   "entrypoints/application.js": {
-    "file": "assets/application-d2cc6c3c.js",
+    "css": [
+      "assets/application-030fb3de.css",
+      "assets/main-cbf0b3e0.css"
+    ],
+    "file": "assets/application-bfe5d012.js",
+    "imports": [
+      "entrypoints/components/map.js"
+    ],
     "isEntry": true,
     "src": "entrypoints/application.js"
+  },
+  "entrypoints/assets/base.css": {
+    "file": "assets/base-f3c22fc4.css",
+    "isEntry": true,
+    "src": "entrypoints/assets/base.css"
+  },
+  "entrypoints/assets/main.css": {
+    "file": "assets/main-cbf0b3e0.css",
+    "isEntry": true,
+    "src": "entrypoints/assets/main.css"
+  },
+  "entrypoints/components/map.js": {
+    "file": "assets/map-3726ebf8.js",
+    "isEntry": true,
+    "src": "entrypoints/components/map.js"
+  },
+  "entrypoints/components/test.js": {
+    "file": "assets/test-74f12bc3.js",
+    "isEntry": true,
+    "src": "entrypoints/components/test.js"
+  },
+  "logo.svg": {
+    "file": "assets/logo-da9b9095.svg",
+    "src": "logo.svg"
+  },
+  "searchButton.vue": {
+    "file": "assets/searchButton-145b5f0e.vue",
+    "src": "searchButton.vue"
   }
 }
