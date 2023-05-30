@@ -19,73 +19,89 @@ p "Created #{Account.count} Accounts"
 Property.destroy_all
 Property.create!([{
   title: "House in Imaichicho",
-  price: 2000000,
+  price: 6300000,
   rooms: 3,
   bathrooms: 1,
   address: "1690-4 Imaichichō, Izumo, Shimane 693-0001",
+  fake_latitude: 35.3614928,
+  fake_longitude: 132.7588458,
   account_id: Account.first.id
 }])
-Property.last.save
-Property.create!([{
+# Property.last.save
+Property.create([{
   title: "New house in Tenjincho",
-  price: 2500000,
+  price: 5500000,
   rooms: 2,
   bathrooms: 1,
   address: "Tenjincho, Izumo, Shimane 693-0005",
+  fake_latitude: 35.3650468,
+  fake_longitude: 132.7420556,
   account_id: Account.first.id
 }])
-Property.last.save
-Property.create!([{
-  title: "Beautiful house inn Yanocho district",
-  price: 3000000,
+# Property.last.save
+Property.create([{
+  title: "Beautiful house in Yanocho district",
+  price: 5850000,
   rooms: 4,
   bathrooms: 2,
   address: "Yanocho, Izumo, Shimane 693-0058",
+  fake_latitude: 35.37891,
+  fake_longitude: 132.737748,
   account_id: Account.first.id
 }])
-Property.last.save
-Property.create!([{
+# Property.last.save
+Property.create([{
   title: "House nearby the mountains",
-  price: 2750000,
+  price: 6100000,
   rooms: 2,
   bathrooms: 1,
   address: "Hiranocho, Izumo, Shimane 693-0065",
+  fake_latitude: 35.39185,
+  fake_longitude: 132.742554,
   account_id: Account.first.id
 }])
-Property.last.save
-Property.create!([{
+# Property.last.save
+Property.create([{
   title: "New house by the sea",
-  price: 4700000,
+  price: 8900000,
   rooms: 4,
   bathrooms: 2,
   address: "Taishacho Kizukinishi, Izumo, Shimane 699-0751",
+  fake_latitude: 35.382282,
+  fake_longitude: 132.674817,
   account_id: Account.first.id
 }])
-Property.last.save
-Property.create!([{
-  title: "House close to the sea annd mountains",
-  price: 3200000,
+# Property.last.save
+Property.create([{
+  title: "House close to the sea and mountains",
+  price: 9200000,
   rooms: 2,
   bathrooms: 1,
   address: "Shimane, Izumo, Taishacho Nakaaraki",
+  fake_latitude: 35.379698,
+  fake_longitude: 132.692814,
   account_id: Account.first.id
 }])
-Property.last.save
-Property.create!([{
+# Property.last.save
+Property.create([{
   title: "House right near Hinomisakiinari Shrine",
-  price: 2400000,
+  price: 7100000,
   rooms: 2,
   bathrooms: 1,
   address: "447 Koryocho Sanbu, Izumo, Shimane",
+  fake_latitude: 35.308655,
+  fake_longitude: 132.683462,
   account_id: Account.first.id
 }])
-Property.last.save
-Property.create!([{
+# Property.last.save
+Property.create([{
   title: "House on the shore of Jinzai Lake",
-  price: 2230000,
+  price: 6850000,
   rooms: 2,
   bathrooms: 2,
   address: "2577-12 Jinzaiokicho, Izumo, Shimane",
+  fake_latitude: 35.3341155,
+  fake_longitude: 132.6967187,
   account_id: Account.first.id
 }])
 Property.last.save
