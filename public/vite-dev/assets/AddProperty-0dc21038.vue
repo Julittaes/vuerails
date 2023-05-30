@@ -1,9 +1,14 @@
 <template>
   <div class="main">
-    <Sidebar :map="map" @set-marker="setMarker" :center="center" @found-places="showMarkers"/>
+    <div class="col-4">
+      <h1> Add house </h1>
+      <h3>General</h3>
+      <AddPropertyForm ref="form" :location="location"/>
+      <Search :map="map" :center="center" @set-marker='setMarker' @found-places="showMarkers" @location-input="locationInput"/>
+      <button type="submit" class="btn btn-primary btn-lg btn-block mt-5" @click="submitForm">Submit</button>
+    </div>
     <div class="map-wrapper">
       <div id="map"></div>
-      <button class="btn btn-light m-1" id="fly">Let's go Izumo!</button>
     </div>
   </div>
 </template>
@@ -13,11 +18,13 @@ import axios from "axios";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import initMap from './map.js';
-import Sidebar from './TheSidebar.vue'
+import AddPropertyForm from './AddPropertyForm.vue';
+import Search from "./Search.vue";
 
 export default {
   components: {
-    Sidebar,
+    AddPropertyForm,
+    Search
   },
   data() {
     return {
@@ -34,9 +41,12 @@ export default {
   },
 
   methods: {
+    locationInput(value) {
+      this.location = value;
+    },
     async createMap() {
       try {
-        this.map = initMap(this.access_token, "globe");
+        this.map = initMap(this.access_token, "streets");
 
         let geocoder = new MapboxGeocoder({
           accessToken: this.access_token,
@@ -64,28 +74,11 @@ export default {
         console.log("map error", err);
       }
     },
-    // async getLocation() {
-    //   try {
-    //     this.loading = true;
-    //     const response = await axios.get(
-    //       `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.center[0]},${this.center[1]}.json?access_token=${this.access_token}`
-    //     );
-
-    //     this.loading = false;
-    //     this.location = response.data.features[0].place_name;
-    //   } catch (err) {
-    //     this.loading = false;
-    //     console.log(err);
-    //   }
-    // },
-    // copyLocation() {
-    //   if (this.location) {
-    //     navigator.clipboard.writeText(this.location);
-    //     alert("Location Copied")
-    //   }
-    //   return;
-    // },
+    submitForm() {
+      this.$refs.form.submit();
+    },
     showMarkers({type, data}) {
+      console.log('addproperty');
       // const id = Date.now();
       let color = 'red';
       switch (type) {

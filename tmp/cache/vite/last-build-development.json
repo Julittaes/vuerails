@@ -1,7 +1,7 @@
 {
   "success": true,
   "errors": "\n(!) Some chunks are larger than 500 kBs after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\n",
-  "timestamp": "2023-05-30 15:08:02",
+  "timestamp": "2023-05-30 17:50:10",
   "vite_ruby": "3.3.2",
-  "digest": "53c54968a06c882cd1d8c2b0ff0bc194f011a0c2"
+  "digest": "6c0f5511ea17fddea0a09115658f5df0bacee213"
 }

@@ -5,7 +5,7 @@
                 <a :href="'/properties/' + house.id" class="list-group-item list-group-item-action flex-column align-items-start"  v-for="house in renderedHouses">
                     <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{ house.title }}</h5>
-                        <small>{{ house.price }} ￥</small>
+                        <small class="text-nowrap">{{ house.price }} ￥</small>
                     </div>
                     <small class="text-nowrap">Updated: {{ createdAt(house)}}</small>
                 </a>
@@ -13,7 +13,6 @@
         </div>
         <div class="map-wrapper">
             <div id="map"></div>
-            <button class="btn btn-light m-1" id="fly">Let's go Izumo!</button>
         </div>
     </div>
 </template>
@@ -47,7 +46,6 @@ export default {
 
     methods: {
         createdAt(house) {
-            console.log(house.created_at);
             return house.created_at.slice(0, 10);
         },
         async createMap() {
@@ -90,7 +88,7 @@ export default {
                 }
             });
             this.showMarkers('circles', featuresCircles);
-            this.showMarkers('houses', featuresHouses);
+            // this.showMarkers('houses', featuresHouses);
         },
         showMarkers(type, data) {
             const thisVue = this;

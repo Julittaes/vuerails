@@ -4,7 +4,7 @@
       <div id="map"></div>
       <button class="btn btn-light m-1" id="fly">Let's go Izumo!</button>
     </div>
-    <Modal />
+    <Modal v-if="showModal" @close="showModal = false" @show-houses="showHouses" @add-house="addHouse"/>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
     return {
       access_token: this.$mapboxApiKey,
       map: {},
+      showModal: false,
     };
   },
 
@@ -29,6 +30,12 @@ export default {
   },
 
   methods: {
+    showHouses() {
+      this.$emit('show-houses');
+    },
+    addHouse() {
+      this.$emit('add-house');
+    },
     async createMap() {
       try {
         this.map = initMap(this.access_token, "globe", this.flyended);
@@ -48,7 +55,7 @@ export default {
 
         thisVue.map.flyTo({
                 ...izumo, // Fly to the selected target
-                duration: 15000, // Animate over 12 seconds
+                duration: 5000, // Animate over 12 seconds
                 essential: true // This animation is considered essential with
                 //respect to prefers-reduced-motion
             });
@@ -61,7 +68,7 @@ export default {
     },
     flyended() {
       console.log('ended!');
-      document.querySelector('#exampleModalCenter').modal('show');
+      this.showModal = true;
     }
   }
 }

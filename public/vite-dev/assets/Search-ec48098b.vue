@@ -1,42 +1,42 @@
 <template>
-  <div class="sidebar p-1">
     <!-- Coordinates Display here -->
     <div class="dislpay-arena">
       <div class="coordinates-header">
-        <h3>Current Coordinates</h3>
-        <p>Latitude: {{ center[0] }}</p>
-        <p>Longitude: {{ center[1] }}</p>
-      </div>
-
-      <div class="coordinates-header">
-        <h3>Enter my address:</h3>
+        <h3>Location</h3>
+        <p class="font-italic">Your address will not be displayed to others. Check you location rating!</p>
 
         <div class="form-group">
-          <input type="text" class="form-control location-control my-1" v-model="location"
-            @input="event => addressEdited = true" />
-          <button v-if="addressEdited" type="button" class="btn btn-info" @click="searchLngLat">
-            Show on the map!
+          <label for="address">Address</label>
+          <input type="text" class="form-control location-control my-2" id="address" v-model="location"
+            @input="locationInput" />
+          <SearchButton v-if="locationFound && !addressEdited" :access-token="access_token" :current-location="center"
+            @found-places="showMarkers" />
+          <button v-if="addressEdited" type="button" class="btn btn-outline-info" @click="searchLngLat">
+            Show my house on the map!
           </button>
           <!-- <button type="button" :disabled="loading" :class="{ disabled: loading }" class="location-btn"
             @click="getLocation">
             Get Location
           </button> -->
+          
           <button type="button" v-if="locationFound && !addressEdited" :disabled="loading" :class="{ disabled: loading }"
-            class="btn btn-info mx-1" @click="toggleEditPosition">
+            class="btn btn-outline-info m-1" @click="toggleEditPosition">
             {{ btnEditPositionText }}
           </button>
-          <p v-if="editPositionFlg">Move marker</p>
+          <small v-if="editPositionFlg">Move marker</small>
         </div>
-        <SearchButton v-if="locationFound" :access-token="access_token" :current-location="center"
-          @found-places="showMarkers" />
-        <p v-if="locationFound">
-          elementary school red
-          hospital blue
-          clinics green
+        <p v-if="locationFound && searchedFlg && !addressEdited">
+          <span class="badge badge-primary m-1">elementary schools: {{ count.elemSchools }}</span>
+          <!-- <span class="badge badge-secondary">Secondary</span>
+          <span class="badge badge-success">Success</span> -->
+          <span class="badge badge-danger m-1">hospital: {{ count.hospitals }}</span>
+          <span class="badge badge-warning m-1">clinics: {{ count.clinics }}</span>
+          <!-- <span class="badge badge-info">Info</span>
+          <span class="badge badge-light">Light</span>
+          <span class="badge badge-dark">Dark</span> -->
         </p>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -44,13 +44,11 @@ import axios from "axios";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import SearchButton from './searchButton.vue';
-import AddProperty from "./AddProperty.vue";
 
 export default {
   props: ['map', 'center'],
   components: {
     SearchButton,
-    AddProperty
   },
   data() {
     return {
@@ -60,8 +58,14 @@ export default {
       // center: this.currentCenter,
       marker: false,
       editPositionFlg: false,
+      searchedFlg: false,
       locationFound: false,
       addressEdited: true,
+      count: {
+        clinics: 0,
+        hospitals: 0,
+        elementarySchools: 0
+      }
     };
   },
 
@@ -81,6 +85,10 @@ export default {
   },
 
   methods: {
+    locationInput(event) {
+      this.addressEdited = true
+      this.$emit('location-input', event);
+    },
     toggleEditPosition() {
       if (this.editPositionFlg) {
 
@@ -96,21 +104,6 @@ export default {
           marker: false,
         });
 
-        // this.map.addControl(geocoder);
-
-        // geocoder.on("result", (e) => {
-        //   const marker = new mapboxgl.Marker({
-        //     draggable: true,
-        //     color: "#D80739",
-        //   })
-        //     .setLngLat(e.result.center)
-        //     .addTo(this.map);
-        //   this.center = e.result.center;
-
-        //   marker.on("dragend", (e) => {
-        //     this.center = Object.values(e.target.getLngLat());
-        //   });
-        // });
       } catch (err) {
         console.log("map error", err);
       }
@@ -135,13 +128,14 @@ export default {
       }
     },
     async searchLngLat() {
-      console.log('click');
+      console.log('click', this.location);
       if (this.location) {
         this.loading = true;
         axios.get(
           `https://api.mapbox.com/geocoding/v5/mapbox.places/${this.location}.json?proximity=ip&access_token=${this.access_token}&language=ja`
         )
           .then(response => {
+            console.log('answer');
             this.loading = false;
             if (response.data.features.length === 0) throw Error('not found');
             // this.center = response.data.features[0].center;
@@ -151,6 +145,7 @@ export default {
             this.addressEdited = false;
           })
           .catch(err => {
+            console.log('err');
             this.locationFound = false;
             if (err.message == 'not found') console.log('not found')
             console.log(err);
@@ -159,6 +154,19 @@ export default {
       return;
     },
     showMarkers(event) {
+      console.log("found-places search", event);
+      this.searchedFlg = true;
+      switch (event.type) {
+        case 'clinics':
+          this.count.clinics = event.data.features.length;
+          break;
+        case 'hospitals':
+          this.count.hospitals = event.data.features.length;
+          break;
+        case 'elemSchools':
+          this.count.elemSchools = event.data.features.length;
+          break;
+      }
       this.$emit('found-places', event);
     }
   }
