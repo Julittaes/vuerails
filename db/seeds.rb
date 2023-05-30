@@ -29,7 +29,7 @@ Property.create!([{
 }])
 # Property.last.save
 Property.create([{
-  title: "New house in Tenjincho",
+  title: "Small house in Tenjincho",
   price: 5500000,
   rooms: 2,
   bathrooms: 1,
@@ -40,7 +40,7 @@ Property.create([{
 }])
 # Property.last.save
 Property.create([{
-  title: "Beautiful house in Yanocho district",
+  title: "Big house in Yanocho district",
   price: 5850000,
   rooms: 4,
   bathrooms: 2,
@@ -62,7 +62,7 @@ Property.create([{
 }])
 # Property.last.save
 Property.create([{
-  title: "New house by the sea",
+  title: "Big house by the sea",
   price: 8900000,
   rooms: 4,
   bathrooms: 2,
@@ -117,7 +117,7 @@ Property.create([{
 }])
 
 Property.create([{
-  title: "New house nearby Masakigaoka park",
+  title: "House nearby Masakigaoka park",
   price: 5500000,
   rooms: 3,
   bathrooms: 1,
@@ -140,11 +140,11 @@ Property.create([{
 
 p "Created #{Property.count} Properties"
 
-Rating.destroy_all
-Rating.create!([{
-  property_id: Property.first.id,
-  location_rating: 8.0
-}])
-Rating.first.save
-p "Created #{Rating.count} Ratings"
+# Rating.destroy_all
+# Rating.create!([{
+#   property_id: Property.first.id,
+#   location_rating: 8.0
+# }])
+# Rating.first.save
+# p "Created #{Rating.count} Ratings"
 
