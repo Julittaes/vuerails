@@ -104,7 +104,40 @@ Property.create([{
   fake_longitude: 132.6967187,
   account_id: Account.first.id
 }])
-Property.last.save
+# Property.last.save
+Property.create([{
+  title: "House nearby Kanda river",
+  price: 5780000,
+  rooms: 2,
+  bathrooms: 2,
+  address: "157 Koshicho, Izumo, Shimane",
+  fake_latitude: 35.32898,
+  fake_longitude: 132.749879,
+  account_id: Account.first.id
+}])
+
+Property.create([{
+  title: "New house nearby Masakigaoka park",
+  price: 5500000,
+  rooms: 3,
+  bathrooms: 1,
+  address: "1175-1 Kandocho, Izumo, Shimane",
+  fake_latitude: 35.33939,
+  fake_longitude: 132.71363,
+  account_id: Account.first.id
+}])
+
+Property.create([{
+  title: "Izumo Taisha beautiful house",
+  price: 10500000,
+  rooms: 4,
+  bathrooms: 2,
+  address: "699-0701 Shimane, Izumo, Taishacho Kizukihigashi",
+  fake_latitude: 35.4032228,
+  fake_longitude: 132.6833164,
+  account_id: Account.first.id
+}])
+
 p "Created #{Property.count} Properties"
 
 Rating.destroy_all
