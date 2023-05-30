@@ -1,16 +1,16 @@
 <template>
   <div class="main">
-    <div class="col-4 py-3">
+    <div class="sidebar col-4 py-3">
       <div>
         <div class="d-flex justify-content-between align-items-center">
-          <h1> Add house </h1>
+          <h2>Add house</h2>
           <button class="btn btn-outline-info" @click="$emit('show-houses')">See all houses</button>
         </div>
 
         <h3>General</h3>
-        <AddPropertyForm ref="form" :location="location" />
+        <AddPropertyForm ref="form" :latitude="center[1]" :longitude="center[0]" :location="location" :rating="rating" @show-houses="$emit('show-houses')"/>
         <Search :map="map" :center="center" @set-marker='setMarker' @found-places="showMarkers"
-          @location-input="locationInput" />
+          @location-input="locationInput" @rating-update="ratingUpdate"/>
         <button type="submit" class="btn btn-primary btn-lg btn-block mt-3" @click="submitForm">Submit</button>
       </div>
     </div>
@@ -40,6 +40,7 @@ export default {
       access_token: this.$mapboxApiKey,
       center: [132.7445942, 35.3665752],
       map: {},
+      rating: 6,
     };
   },
 
@@ -48,6 +49,9 @@ export default {
   },
 
   methods: {
+    ratingUpdate(value) {
+      this.rating = value;
+    },
     locationInput(value) {
       this.location = value;
     },
@@ -70,13 +74,22 @@ export default {
     },
     showMarkers({ type, data }) {
       console.log('addproperty');
-      let color = 'blue';
+      let color = 'magneta';
       switch (type) {
         case 'hospitals':
           color = 'red';
           break;
+        case 'konbini':
+          color = 'yellow';
+          break;
+        case 'elemSchools':
+          color = 'blue';
+          break;
         case 'clinics':
           color = 'green';
+          break;
+        case 'kindergardens':
+          color = '#17a2b8';
           break;
         default:
           break;
@@ -140,11 +153,16 @@ export default {
 <style scoped>
 .main {
   display: flex;
+  height: 100vh;
 }
 
 .map-wrapper {
   position: relative;
   height: 100vh;
   width: 100%;
+}
+
+.sidebar {
+  overflow-y: auto;
 }
 </style>

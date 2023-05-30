@@ -33,6 +33,16 @@ export default {
             console.log(response.data);
             this.$emit('found-places',{type:'hospitals', data: response.data});
         })
+        axios.get(`https://api.mapbox.com/search/searchbox/v1/category/ショップ>コンビニ?language=ja&limit=10&${bboxString}&proximity=${this.currentLocation[0]},${this.currentLocation[1]}&country=JP&access_token=${this.accessToken}`)
+        .then((response) => {
+            console.log(response.data);
+            this.$emit('found-places',{type:'konbini', data: response.data});
+        })
+        axios.get(`https://api.mapbox.com/search/searchbox/v1/category/生活>幼稚園?language=ja&limit=10&${bboxString}&proximity=${this.currentLocation[0]},${this.currentLocation[1]}&country=JP&access_token=${this.accessToken}`)
+        .then((response) => {
+            console.log(response.data);
+            this.$emit('found-places',{type:'kindergardens', data: response.data});
+        })
     }
   }
 }

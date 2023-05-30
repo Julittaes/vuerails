@@ -1,6 +1,6 @@
 {
   "entrypoints/App.vue": {
-    "file": "assets/App-62bb1a8f.vue",
+    "file": "assets/App-e295804a.vue",
     "src": "entrypoints/App.vue"
   },
   "entrypoints/assets/logo.svg": {
@@ -8,15 +8,15 @@
     "src": "entrypoints/assets/logo.svg"
   },
   "entrypoints/components/AddProperty.vue": {
-    "file": "assets/AddProperty-ef3b0192.vue",
+    "file": "assets/AddProperty-e835fd21.vue",
     "src": "entrypoints/components/AddProperty.vue"
   },
   "entrypoints/components/AddPropertyForm.vue": {
-    "file": "assets/AddPropertyForm-441f010c.vue",
+    "file": "assets/AddPropertyForm-e820d968.vue",
     "src": "entrypoints/components/AddPropertyForm.vue"
   },
   "entrypoints/components/Houses.vue": {
-    "file": "assets/Houses-3160a965.vue",
+    "file": "assets/Houses-8b08c126.vue",
     "src": "entrypoints/components/Houses.vue"
   },
   "entrypoints/components/Modal.vue": {
@@ -24,15 +24,15 @@
     "src": "entrypoints/components/Modal.vue"
   },
   "entrypoints/components/Search.vue": {
-    "file": "assets/Search-b0ce0ead.vue",
+    "file": "assets/Search-e8142a6c.vue",
     "src": "entrypoints/components/Search.vue"
   },
   "entrypoints/components/TheWelcome.vue": {
-    "file": "assets/TheWelcome-b1a9ff4b.vue",
+    "file": "assets/TheWelcome-ff220710.vue",
     "src": "entrypoints/components/TheWelcome.vue"
   },
   "entrypoints/components/searchButton.vue": {
-    "file": "assets/searchButton-7842259c.vue",
+    "file": "assets/searchButton-71908e6d.vue",
     "src": "entrypoints/components/searchButton.vue"
   }
 }

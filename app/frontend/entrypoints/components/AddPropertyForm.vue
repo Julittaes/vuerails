@@ -25,6 +25,7 @@
         <input type="hidden" name="property[latitude]" :value="latitude"/>
         <input type="hidden" name="property[longitude]" :value="longitude"/>
         <input type="hidden" name="property[address]" :value="location"/>
+        <input type="hidden" name="property[rating]" :value="rating"/>
     </form>
 </template>
   
@@ -32,7 +33,7 @@
 import axios from "axios";
 
 export default {
-    props: ['latitude', 'longitude', 'location'],
+    props: ['latitude', 'longitude', 'location', 'rating'],
     methods: {
         submit(){
             const thisVue = this;

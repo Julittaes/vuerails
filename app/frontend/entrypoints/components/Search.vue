@@ -3,8 +3,7 @@
   <div class="dislpay-arena">
     <div class="coordinates-header">
       <h3>Location</h3>
-      <p class="font-italic">Your address will not be displayed to others.</p>
-
+      <span class="font-italic">Your address will not be displayed to others.</span>
       <div class="form-group">
         <label for="address">Address</label>
         <input type="text" class="form-control location-control my-2" id="address" v-model="location"
@@ -27,16 +26,20 @@
       <p class="font-italic">Check you location rating!</p>
       <SearchButton :disabled="!locationFound || addressEdited" :access-token="access_token" :current-location="center"
         @found-places="showMarkers" />
-      <p class="mt-1" v-if="locationFound && searchedFlg && !addressEdited">
+        <div v-if="locationFound && searchedFlg && !addressEdited">
+      <p class="mt-1">
         <span class="text-lg badge badge-primary m-1">elementary schools: {{ count.elemSchools }}</span>
-        <!-- <span class="badge badge-secondary">Secondary</span>
-          <span class="badge badge-success">Success</span> -->
-        <span class="text-lg badge badge-danger m-1">hospital: {{ count.hospitals }}</span>
-        <span class="text-lg badge badge-warning m-1">clinics: {{ count.clinics }}</span>
+        <!-- <span class="badge badge-secondary">Secondary</span>-->
+          <span class="text-lg badge badge-warning m-1">konbini: {{ count.konbini }}</span>
+        <span class="text-lg badge badge-danger m-1">hospitals: {{ count.hospitals }}</span>
+        <span class="text-lg badge badge-success m-1">clinics: {{ count.clinics }}</span>
+        <span class="text-lg badge badge-info m-1">kindergardens: {{ count.kindergardens }}</span>
         <!-- <span class="badge badge-info">Info</span>
           <span class="badge badge-light">Light</span>
           <span class="badge badge-dark">Dark</span> -->
       </p>
+      <h6>Average rating: {{ rating }} / 10</h6>
+    </div>
     </div>
   </div>
 </template>
@@ -66,7 +69,9 @@ export default {
       count: {
         clinics: 0,
         hospitals: 0,
-        elementarySchools: 0
+        elementarySchools: 0,
+        konbini: 0,
+        kindergardens: 0
       }
     };
   },
@@ -83,6 +88,14 @@ export default {
   computed: {
     btnEditPositionText() {
       return this.editPositionFlg ? 'Save new position' : 'Adjust position'
+    },
+    rating() {
+      let sum = 0;
+      for (const property in this.count) {
+        sum = sum + this.count[property];
+      }
+      if (sum >= 40) return 10;
+      return 6 + sum/10;
     }
   },
 
@@ -168,8 +181,15 @@ export default {
         case 'elemSchools':
           this.count.elemSchools = event.data.features.length;
           break;
+        case 'konbini':
+          this.count.konbini = event.data.features.length;
+          break;
+        case 'kindergardens':
+          this.count.kindergardens = event.data.features.length;
+          break;
       }
       this.$emit('found-places', event);
+      this.$emit('rating-update', this.rating);
     }
   }
 }

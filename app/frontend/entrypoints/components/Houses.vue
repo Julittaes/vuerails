@@ -8,9 +8,12 @@
                 <a class="list-group-item list-group-item-action flex-column align-items-start"  v-for="house in renderedHouses">
                     <div class="d-flex w-100 justify-content-between align-items-center">
                         <h5 class="mb-1">{{ house.title }}</h5>
+                        <h4 class="badge badge-secondary ml-1">{{ house.rating }}</h4>
+                    </div>
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <small class="text-nowrap">Updated: {{ createdAt(house)}}</small>
                         <small class="text-nowrap ml-1">{{ house.price }} ￥</small>
                     </div>
-                    <small class="text-nowrap">Updated: {{ createdAt(house)}}</small>
                 </a>
           </div>
         </div>
@@ -60,12 +63,13 @@ export default {
                         'Content-Type': 'application/json'
                     }
                 })
-                    .then(resp => {
-                        console.log('response', resp.data);
-                        this.houses = JSON.parse(JSON.stringify(resp.data));
-                        // console.log('houses', this.houses);
-                        this.drawHouses(JSON.parse(JSON.stringify(resp.data)));
-                    })
+                .then(resp => {
+                    console.log('response', resp.data);
+                    let array = JSON.parse(JSON.stringify(resp.data));
+                    this.houses = array.sort((a, b) => b.rating - a.rating);
+                    // console.log('houses', this.houses);
+                    this.drawHouses(JSON.parse(JSON.stringify(resp.data)));
+                })
             } catch (err) {
                 console.log("map error", err);
             }
@@ -185,25 +189,4 @@ export default {
     height: 100vh;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(109, 109, 109); 
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #d1d1d1; 
-}
 </style>
