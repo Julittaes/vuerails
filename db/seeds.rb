@@ -18,14 +18,77 @@ p "Created #{Account.count} Accounts"
 
 Property.destroy_all
 Property.create!([{
-  title: "Izumo House",
-  price: 20000,
-  rooms: 2,
+  title: "House in Imaichicho",
+  price: 2000000,
+  rooms: 3,
   bathrooms: 1,
   address: "1690-4 Imaichichō, Izumo, Shimane 693-0001",
   account_id: Account.first.id
 }])
-Property.first.save
+Property.last.save
+Property.create!([{
+  title: "New house in Tenjincho",
+  price: 2500000,
+  rooms: 2,
+  bathrooms: 1,
+  address: "Tenjincho, Izumo, Shimane 693-0005",
+  account_id: Account.first.id
+}])
+Property.last.save
+Property.create!([{
+  title: "Beautiful house inn Yanocho district",
+  price: 3000000,
+  rooms: 4,
+  bathrooms: 2,
+  address: "Yanocho, Izumo, Shimane 693-0058",
+  account_id: Account.first.id
+}])
+Property.last.save
+Property.create!([{
+  title: "House nearby the mountains",
+  price: 2750000,
+  rooms: 2,
+  bathrooms: 1,
+  address: "Hiranocho, Izumo, Shimane 693-0065",
+  account_id: Account.first.id
+}])
+Property.last.save
+Property.create!([{
+  title: "New house by the sea",
+  price: 4700000,
+  rooms: 4,
+  bathrooms: 2,
+  address: "Taishacho Kizukinishi, Izumo, Shimane 699-0751",
+  account_id: Account.first.id
+}])
+Property.last.save
+Property.create!([{
+  title: "House close to the sea annd mountains",
+  price: 3200000,
+  rooms: 2,
+  bathrooms: 1,
+  address: "Shimane, Izumo, Taishacho Nakaaraki",
+  account_id: Account.first.id
+}])
+Property.last.save
+Property.create!([{
+  title: "House right near Hinomisakiinari Shrine",
+  price: 2400000,
+  rooms: 2,
+  bathrooms: 1,
+  address: "447 Koryocho Sanbu, Izumo, Shimane",
+  account_id: Account.first.id
+}])
+Property.last.save
+Property.create!([{
+  title: "House on the shore of Jinzai Lake",
+  price: 2230000,
+  rooms: 2,
+  bathrooms: 2,
+  address: "2577-12 Jinzaiokicho, Izumo, Shimane",
+  account_id: Account.first.id
+}])
+Property.last.save
 p "Created #{Property.count} Properties"
 
 Rating.destroy_all

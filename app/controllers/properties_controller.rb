@@ -20,8 +20,8 @@ class PropertiesController < ApplicationController
 
   def set_fake_coordinate
     if @property.latitude.present?
-      @property.fake_latitude = @property.latitude + 0.003
-      @property.fake_longitude = @property.longitude + 0.003
+      @property.fake_latitude = @property.latitude + [-0.0003, -0.0002, -0.0001, 0.0001, 0.0002, 0.0003].sample
+      @property.fake_longitude = @property.longitude + [-0.0003, -0.0002, -0.0001, 0.0001, 0.0002, 0.0003].sample
       @property.save
     else
       render json: @property.errors, status: :unprocessable_entity
