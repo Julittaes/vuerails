@@ -55,9 +55,9 @@ class RatingsController < ApplicationController
 
     if @rating.update(rating_params)
         render json: @rating
-      else
+    else
         render json: @rating.errors, status: :unprocessable_entity
-      end
+    end
   end
 
   # DELETE /ratings/1 or /ratings/1.json
@@ -67,7 +67,7 @@ class RatingsController < ApplicationController
     # respond_to do |format|
     #   format.html { redirect_to ratings_url, notice: "Rating was successfully destroyed." }
     #   format.json { head :no_content }
-    end
+    # end
   end
 
   private

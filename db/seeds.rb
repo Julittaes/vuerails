@@ -22,7 +22,6 @@ Property.create!([{
   price: 20000,
   rooms: 2,
   bathrooms: 1,
-  photo: nil,
   address: "1690-4 Imaichichō, Izumo, Shimane 693-0001",
   account_id: Account.first.id
 }])

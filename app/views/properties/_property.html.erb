@@ -20,13 +20,13 @@
   </p>
 
   <p>
-    <strong>Photo:</strong>
-    <%= property.photo %>
+    <strong>Avatar:</strong>
+    <%= image_tag property.avatar.representation(resize_to_limit: [100, 100]) %>
   </p>
 
   <p>
-    <strong>Avg rating:</strong>
-    <%= property.avg_rating %>
+    <strong>Rating:</strong>
+    <%= property.rating&.location_rating %>
   </p>
 
 </div>
