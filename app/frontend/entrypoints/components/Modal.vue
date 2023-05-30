@@ -3,8 +3,8 @@
         <div class="modal-mask">
           <div class="modal-wrapper">
             <div class="modal-container">
-                <button class="btn btn-light m-1" @click="$emit('show-houses')">See houses</button>
-                <button class="btn btn-info m-1" @click="$emit('add-house')">Add house</button>
+                <button class="btn btn-light m-1 btn-lg" @click="$emit('show-houses')">See Izumo houses</button>
+                <button class="btn btn-info m-1 btn-lg" @click="$emit('add-house')">Add my house</button>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@
 }
 
 .modal-container {
-  width: 300px;
+  width: 500px;
   margin: 0px auto;
   background-color: transparent;
   border-radius: 2px;

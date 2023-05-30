@@ -12,18 +12,20 @@ export default {
   data() {
     return {
       showHousesPage: false,
-      showAddHouse: true,
-      showWelcome: false
+      showAddHouse: false,
+      showWelcome: true
     };
   },
   methods: {
     showHouses() {
       this.showHousesPage = true;
       this.showWelcome = false;
+      this.showAddHouse = false;
     },
     addHouse() {
       this.showAddHouse = true;
       this.showWelcome = false;
+      this.showHousesPage = false;
     },
   }
 }
@@ -31,14 +33,14 @@ export default {
 
 <template>
   <div id="app">
-    <!-- <header>
-      <a href="/properties/new">New</a>
-    </header> -->
 
     <main>
       <TheWelcome v-if='showWelcome' @show-houses="showHouses" @add-house="addHouse"/>
-      <Houses v-if='showHousesPage'/>
-      <AddProperty v-if='showAddHouse'/>
+      <Houses v-if='showHousesPage' @add-house="addHouse">
+      </Houses>
+      <AddProperty v-if='showAddHouse' @show-houses="showHouses">
+      </AddProperty>
+
     </main>
   </div>
 </template>

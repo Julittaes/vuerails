@@ -1,11 +1,14 @@
 <template>
     <div class="main">
-        <div class="sidebar">
+        <div class="sidebar p-1">
+            <div>
+                <button class="btn btn-block btn-primary my-1" @click="$emit('add-house')">Add my house</button>
+            </div>
             <div class="list-group">
-                <a :href="'/properties/' + house.id" class="list-group-item list-group-item-action flex-column align-items-start"  v-for="house in renderedHouses">
-                    <div class="d-flex w-100 justify-content-between">
+                <a class="list-group-item list-group-item-action flex-column align-items-start"  v-for="house in renderedHouses">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
                         <h5 class="mb-1">{{ house.title }}</h5>
-                        <small class="text-nowrap">{{ house.price }} ￥</small>
+                        <small class="text-nowrap ml-1">{{ house.price }} ￥</small>
                     </div>
                     <small class="text-nowrap">Updated: {{ createdAt(house)}}</small>
                 </a>
@@ -165,7 +168,7 @@ export default {
 </script>
   
   
-<style>
+<style scoped>
 .main {
     display: flex;
 }
@@ -177,7 +180,30 @@ export default {
 }
 
 .sidebar {
-    width: 400px;
+    overflow: auto;
+    max-width: 400px;
     height: 100vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(109, 109, 109); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d1d1d1; 
 }
 </style>

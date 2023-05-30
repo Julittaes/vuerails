@@ -15146,3 +15146,3295 @@ Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
 Completed 200 OK in 5046ms (Views: 5044.9ms | Allocations: 7736)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mAccount Load (2.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Destroy (3.2ms)[0m  [1m[31mDELETE FROM "accounts" WHERE "accounts"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (2.2ms)[0m  [1m[32mINSERT INTO "accounts" ("first_name", "last_name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Tanaka"], ["last_name", "Izumoshi"], ["email", "tanaka@izumo.com"], ["created_at", "2023-05-30 12:33:58.369484"], ["updated_at", "2023-05-30 12:33:58.369484"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAccount Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "accounts"[0m
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (2.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 49], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (0.4ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 49]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 50], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (0.3ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 50]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 51], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (0.3ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 51]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 52], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (0.5ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 52]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 53], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (0.3ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 53]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 54], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (0.7ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 54]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 55], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (18.3ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 55]]
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 56], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (0.5ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 56]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 57], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  [1m[36mProperty Destroy (0.6ms)[0m  [1m[31mDELETE FROM "properties" WHERE "properties"."id" = $1[0m  [["id", 57]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (3.2ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "House in Imaichicho"], ["price", 6300000], ["rooms", 3], ["bathrooms", 1], ["address", "1690-4 Imaichichō, Izumo, Shimane 693-0001"], ["latitude", 35.3634928], ["longitude", 132.7598458], ["created_at", "2023-05-30 12:33:59.880815"], ["updated_at", "2023-05-30 12:33:59.880815"], ["fake_latitude", 35.3614928], ["fake_longitude", 132.7588458]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (1.3ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "New house in Tenjincho"], ["price", 5500000], ["rooms", 2], ["bathrooms", 1], ["address", "Tenjincho, Izumo, Shimane 693-0005"], ["latitude", 35.3620468], ["longitude", 132.7400556], ["created_at", "2023-05-30 12:34:00.796474"], ["updated_at", "2023-05-30 12:34:00.796474"], ["fake_latitude", 35.3650468], ["fake_longitude", 132.7420556]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (1.0ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "Beautiful house in Yanocho district"], ["price", 5850000], ["rooms", 4], ["bathrooms", 2], ["address", "Yanocho, Izumo, Shimane 693-0058"], ["latitude", 35.37991], ["longitude", 132.738748], ["created_at", "2023-05-30 12:34:01.483396"], ["updated_at", "2023-05-30 12:34:01.483396"], ["fake_latitude", 35.37891], ["fake_longitude", 132.737748]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (2.3ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "House nearby the mountains"], ["price", 6100000], ["rooms", 2], ["bathrooms", 1], ["address", "Hiranocho, Izumo, Shimane 693-0065"], ["latitude", 35.38985], ["longitude", 132.739554], ["created_at", "2023-05-30 12:34:02.356726"], ["updated_at", "2023-05-30 12:34:02.356726"], ["fake_latitude", 35.39185], ["fake_longitude", 132.742554]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (1.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (1.1ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "New house by the sea"], ["price", 8900000], ["rooms", 4], ["bathrooms", 2], ["address", "Taishacho Kizukinishi, Izumo, Shimane 699-0751"], ["latitude", 35.385282], ["longitude", 132.676817], ["created_at", "2023-05-30 12:34:03.183346"], ["updated_at", "2023-05-30 12:34:03.183346"], ["fake_latitude", 35.382282], ["fake_longitude", 132.674817]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (1.5ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "House close to the sea and mountains"], ["price", 9200000], ["rooms", 2], ["bathrooms", 1], ["address", "Shimane, Izumo, Taishacho Nakaaraki"], ["latitude", 35.377698], ["longitude", 132.690814], ["created_at", "2023-05-30 12:34:04.076397"], ["updated_at", "2023-05-30 12:34:04.076397"], ["fake_latitude", 35.379698], ["fake_longitude", 132.692814]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (1.1ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "House right near Hinomisakiinari Shrine"], ["price", 7100000], ["rooms", 2], ["bathrooms", 1], ["address", "447 Koryocho Sanbu, Izumo, Shimane"], ["latitude", 35.308555], ["longitude", 132.683762], ["created_at", "2023-05-30 12:34:04.844539"], ["updated_at", "2023-05-30 12:34:04.844539"], ["fake_latitude", 35.308655], ["fake_longitude", 132.683462]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (4.5ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "House on the shore of Jinzai Lake"], ["price", 6850000], ["rooms", 2], ["bathrooms", 2], ["address", "2577-12 Jinzaiokicho, Izumo, Shimane"], ["latitude", 35.3351155], ["longitude", 132.6937187], ["created_at", "2023-05-30 12:34:05.714412"], ["updated_at", "2023-05-30 12:34:05.714412"], ["fake_latitude", 35.3341155], ["fake_longitude", 132.6967187]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (0.9ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "House nearby Kanda river"], ["price", 5780000], ["rooms", 2], ["bathrooms", 2], ["address", "157 Koshicho, Izumo, Shimane"], ["latitude", 35.32698], ["longitude", 132.748879], ["created_at", "2023-05-30 12:34:06.532354"], ["updated_at", "2023-05-30 12:34:06.532354"], ["fake_latitude", 35.32898], ["fake_longitude", 132.749879]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (1.4ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "New house nearby Masakigaoka park"], ["price", 5500000], ["rooms", 3], ["bathrooms", 1], ["address", "1175-1 Kandocho, Izumo, Shimane"], ["latitude", 35.33839], ["longitude", 132.71163], ["created_at", "2023-05-30 12:34:07.250466"], ["updated_at", "2023-05-30 12:34:07.250466"], ["fake_latitude", 35.33939], ["fake_longitude", 132.71363]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProperty Create (1.2ms)[0m  [1m[32mINSERT INTO "properties" ("account_id", "title", "price", "rooms", "bathrooms", "address", "latitude", "longitude", "created_at", "updated_at", "fake_latitude", "fake_longitude") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["account_id", 9], ["title", "Izumo Taisha beautiful house"], ["price", 10500000], ["rooms", 4], ["bathrooms", 2], ["address", "699-0701 Shimane, Izumo, Taishacho Kizukihigashi"], ["latitude", 35.4002228], ["longitude", 132.6863164], ["created_at", "2023-05-30 12:34:08.074385"], ["updated_at", "2023-05-30 12:34:08.074385"], ["fake_latitude", 35.4032228], ["fake_longitude", 132.6833164]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProperty Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "properties"[0m
+  [1m[36mRating Load (1.6ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings"[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRating Destroy (1.0ms)[0m  [1m[31mDELETE FROM "ratings" WHERE "ratings"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mProperty Load (1.0ms)[0m  [1m[34mSELECT "properties".* FROM "properties" ORDER BY "properties"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mRating Create (1.9ms)[0m  [1m[32mINSERT INTO "ratings" ("property_id", "location_rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["property_id", 58], ["location_rating", 8.0], ["created_at", "2023-05-30 12:34:08.138142"], ["updated_at", "2023-05-30 12:34:08.138142"]]
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRating Load (0.6ms)[0m  [1m[34mSELECT "ratings".* FROM "ratings" ORDER BY "ratings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRating Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "ratings"[0m
+Started GET "/" for ::1 at 2023-05-30 21:34:25 +0900
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 710)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/TheHeader-b12e8251.vue            0.29 kB
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.47 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-6f1be40d.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-640bbdec.vue               5.94 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-23a243ee.js       1,058.23 kB │ gzip: 298.78 kB
+
+✓ built in 3.92s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 4499.8ms | Allocations: 18819)
+Completed 200 OK in 4508ms (Views: 4507.4ms | ActiveRecord: 0.0ms | Allocations: 20538)
+
+
+Started POST "/properties" for ::1 at 2023-05-30 21:35:26 +0900
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"title"=>"My great house", "price"=>"1233", "rooms"=>"2", "bathrooms"=>"2", "account_id"=>"8", "latitude"=>"", "longitude"=>"", "address"=>""}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+Completed 500 Internal Server Error in 134ms (Views: 2.5ms | ActiveRecord: 21.0ms | Allocations: 22023)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/properties_controller.rb:44:in `create'
+Started GET "/" for ::1 at 2023-05-30 21:36:34 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 154)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/TheHeader-b12e8251.vue            0.29 kB
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.47 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-640bbdec.vue               5.94 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-2821de87.js       1,058.23 kB │ gzip: 298.79 kB
+
+✓ built in 4.92s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5499.9ms | Allocations: 8060)
+Completed 200 OK in 5503ms (Views: 5501.2ms | ActiveRecord: 0.0ms | Allocations: 8352)
+
+
+Started POST "/properties" for ::1 at 2023-05-30 21:36:51 +0900
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"title"=>"qweqwe", "price"=>"1234", "rooms"=>"3", "bathrooms"=>"3", "account_id"=>"8", "latitude"=>"", "longitude"=>"", "address"=>"[object Event]"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+  [1m[36mAccount Load (1.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+Completed 500 Internal Server Error in 2998ms (Views: 1.5ms | ActiveRecord: 3.7ms | Allocations: 6496)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/properties_controller.rb:44:in `create'
+Started GET "/" for ::1 at 2023-05-30 21:42:47 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 154)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/TheHeader-b12e8251.vue            0.29 kB
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.48 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-5bdb80c0.js       1,058.25 kB │ gzip: 298.79 kB
+
+✓ built in 5.18s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5654.1ms | Allocations: 8069)
+Completed 200 OK in 5657ms (Views: 5655.3ms | Allocations: 8312)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:45:00 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/TheHeader-22915d8a.vue            0.30 kB
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.48 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-69cd4b4b.js       1,058.26 kB │ gzip: 298.80 kB
+
+✓ built in 5.05s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5620.0ms | Allocations: 7820)
+Completed 200 OK in 5623ms (Views: 5621.9ms | Allocations: 8047)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:48:08 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/TheHeader-7040a936.vue            0.85 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.47 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-627a9afb.js       1,058.71 kB │ gzip: 298.97 kB
+
+✓ built in 4.79s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5252.0ms | Allocations: 7834)
+Completed 200 OK in 5254ms (Views: 5253.2ms | Allocations: 8061)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:49:32 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/TheHeader-4d582e29.vue            0.89 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.48 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-484b57d8.js       1,058.75 kB │ gzip: 298.99 kB
+
+✓ built in 4.83s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5238.5ms | Allocations: 7807)
+Completed 200 OK in 5241ms (Views: 5239.9ms | Allocations: 8046)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:49:51 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+Skipping vite build. Watched files have not changed since the last build at 2023-05-30 21:49:37
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 7157)
+Completed 200 OK in 44ms (Views: 42.8ms | Allocations: 7384)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:50:11 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/TheHeader-27999441.vue            0.88 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.48 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-2d3f6290.js       1,058.74 kB │ gzip: 298.99 kB
+
+✓ built in 4.84s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5325.4ms | Allocations: 7826)
+Completed 200 OK in 5328ms (Views: 5326.9ms | Allocations: 8053)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:50:57 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/TheHeader-d3b9e09b.vue            0.89 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.47 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-e398e6e7.js       1,058.75 kB │ gzip: 298.99 kB
+
+✓ built in 4.92s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5400.3ms | Allocations: 7835)
+Completed 200 OK in 5402ms (Views: 5401.5ms | Allocations: 8064)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:51:25 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/TheHeader-22636d02.vue            0.88 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.47 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-6736bb66.js       1,058.74 kB │ gzip: 298.99 kB
+
+✓ built in 4.80s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5295.9ms | Allocations: 7833)
+Completed 200 OK in 5298ms (Views: 5297.0ms | Allocations: 8060)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:51:35 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/TheHeader-7a9b915c.vue            0.84 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.47 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-2f2c8f8d.js       1,058.70 kB │ gzip: 298.96 kB
+
+✓ built in 4.76s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5266.6ms | Allocations: 7822)
+Completed 200 OK in 5269ms (Views: 5267.8ms | Allocations: 8049)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:51:43 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+Skipping vite build. Watched files have not changed since the last build at 2023-05-30 21:51:40
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 7132)
+Completed 200 OK in 19ms (Views: 18.7ms | Allocations: 7359)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:52:12 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 154 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/TheHeader-2b7538d1.vue            0.85 kB
+
+../../public/vite-dev/assets/App-84d51a7c.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.39 kB │ gzip:   0.32 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.81 kB │ gzip:   0.48 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-5b9cb5f7.vue               5.67 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-a0d7c420.js       1,058.71 kB │ gzip: 298.97 kB
+
+✓ built in 5.01s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5437.2ms | Allocations: 7834)
+Completed 200 OK in 5439ms (Views: 5438.8ms | Allocations: 8061)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:58:21 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-789d3f56.vue                  0.93 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.46 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-14d4f967.vue               5.74 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-4667c008.js       1,057.95 kB │ gzip: 298.69 kB
+
+✓ built in 4.68s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5166.0ms | Allocations: 7489)
+Completed 200 OK in 5169ms (Views: 5168.1ms | Allocations: 7716)
+
+
+Started GET "/" for ::1 at 2023-05-30 21:59:09 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-60fe7c76.vue                  0.93 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-4c9a00aa.vue                1.60 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-14d4f967.vue               5.74 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-ee7360bb.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-67d8a659.js       1,057.94 kB │ gzip: 298.69 kB
+
+✓ built in 4.79s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 5230.6ms | Allocations: 7495)
+Completed 200 OK in 5233ms (Views: 5231.8ms | Allocations: 7722)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:02:46 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-64d53cdd.vue                1.61 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-14d4f967.vue               5.74 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-5f7a49b3.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-e0c9dd98.js       1,057.96 kB │ gzip: 298.69 kB
+
+✓ built in 8.97s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9677.9ms | Allocations: 7509)
+Completed 200 OK in 9680ms (Views: 9679.2ms | Allocations: 7736)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 22:04:09 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (4.2ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 67ms (Views: 59.2ms | ActiveRecord: 23.8ms | Allocations: 5585)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:05:01 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/TheWelcome-3bf49eb6.vue           1.96 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-5f7a49b3.css        166.20 kB │ gzip:  25.35 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-92375c8a.js       1,057.94 kB │ gzip: 298.66 kB
+
+✓ built in 9.17s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9894.6ms | Allocations: 7512)
+Completed 200 OK in 9898ms (Views: 9896.4ms | ActiveRecord: 0.0ms | Allocations: 7742)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:09:32 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-c2a5619a.vue           3.17 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-bb1985ec.css        167.09 kB │ gzip:  25.60 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-c002051d.js       1,057.97 kB │ gzip: 298.68 kB
+
+✓ built in 9.08s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9816.3ms | Allocations: 7509)
+Completed 200 OK in 9820ms (Views: 9818.4ms | ActiveRecord: 0.0ms | Allocations: 7740)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:13:08 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+Started GET "/" for ::1 at 2023-05-30 22:13:17 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-d9471be3.vue           3.19 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-bb1985ec.css        167.09 kB │ gzip:  25.60 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-2783bdee.js       1,058.00 kB │ gzip: 298.68 kB
+
+✓ built in 8.95s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+Skipping vite build. Watched files have not changed since the last build at 2023-05-30 22:13:18
+  Rendered layout layouts/application.html.erb (Duration: 9737.8ms | Allocations: 13684)
+Completed 200 OK in 9742ms (Views: 9740.1ms | Allocations: 13931)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 449.0ms | Allocations: 12495)
+Completed 200 OK in 451ms (Views: 449.9ms | Allocations: 12722)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:15:31 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-e750ff25.vue           3.44 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-88620441.css        167.24 kB │ gzip:  25.64 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-14d8e2ad.js       1,058.03 kB │ gzip: 298.70 kB
+
+✓ built in 8.85s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9639.7ms | Allocations: 7491)
+Completed 200 OK in 9644ms (Views: 9643.3ms | Allocations: 7718)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:16:00 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-c2d37d7a.vue           3.44 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-3dfc6779.css        167.24 kB │ gzip:  25.64 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-758f7623.js       1,058.03 kB │ gzip: 298.70 kB
+
+✓ built in 8.99s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9691.0ms | Allocations: 7543)
+Completed 200 OK in 9694ms (Views: 9692.8ms | Allocations: 7770)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:17:15 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.46 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-1269b600.vue           3.45 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-3dfc6779.css        167.24 kB │ gzip:  25.64 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-283e2be7.js       1,058.04 kB │ gzip: 298.71 kB
+
+✓ built in 9.13s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9835.9ms | Allocations: 7506)
+Completed 200 OK in 9838ms (Views: 9837.2ms | Allocations: 7733)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:18:08 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-7b1789f0.vue           3.46 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-a0e35a7f.css        167.22 kB │ gzip:  25.64 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-82374c02.js       1,058.04 kB │ gzip: 298.71 kB
+
+✓ built in 8.95s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9920.3ms | Allocations: 7509)
+Completed 200 OK in 9923ms (Views: 9922.3ms | Allocations: 7736)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:18:40 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.46 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-da1f7317.vue           3.47 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-0a2224eb.css        167.21 kB │ gzip:  25.64 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-16bd4daa.js       1,058.04 kB │ gzip: 298.71 kB
+
+✓ built in 8.91s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9683.0ms | Allocations: 7510)
+Completed 200 OK in 9686ms (Views: 9685.1ms | Allocations: 7737)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:18:52 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 143)
+Skipping vite build. Watched files have not changed since the last build at 2023-05-30 22:18:50
+  Rendered layout layouts/application.html.erb (Duration: 196.3ms | Allocations: 6823)
+Completed 200 OK in 202ms (Views: 201.5ms | Allocations: 7051)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:19:45 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.46 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-bdb88669.vue           3.48 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-3518c8c7.css        167.22 kB │ gzip:  25.64 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-ed457678.js       1,058.04 kB │ gzip: 298.71 kB
+
+✓ built in 9.04s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9886.4ms | Allocations: 7521)
+Completed 200 OK in 9890ms (Views: 9888.6ms | Allocations: 7749)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:20:29 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-f34de58a.vue           3.48 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-cbf59d42.css        167.06 kB │ gzip:  25.59 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-68c2a380.js       1,058.03 kB │ gzip: 298.70 kB
+
+✓ built in 8.97s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9712.7ms | Allocations: 7501)
+Completed 200 OK in 9716ms (Views: 9714.5ms | Allocations: 7728)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:22:25 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-5e29b062.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.46 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-b3ae388a.vue           3.52 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-13c1ee1c.css        167.10 kB │ gzip:  25.60 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-99850bf0.js       1,058.03 kB │ gzip: 298.70 kB
+
+✓ built in 9.10s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 9933.2ms | Allocations: 7518)
+Completed 200 OK in 9936ms (Views: 9934.9ms | Allocations: 7745)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:33:20 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Skipping vite build. Watched files have not changed since the last build at 2023-05-30 22:22:35
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 6829)
+Completed 200 OK in 15ms (Views: 14.6ms | Allocations: 7056)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:34:56 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-998bf1eb.vue           3.59 kB
+
+../../public/vite-dev/assets/Houses-41b8fcb1.vue               5.71 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-4a2da510.css        167.10 kB │ gzip:  25.60 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-9426ca38.js       1,058.06 kB │ gzip: 298.72 kB
+
+✓ built in 3.49s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 3736.5ms | Allocations: 7497)
+Completed 200 OK in 3738ms (Views: 3737.2ms | Allocations: 7724)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 22:35:31 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 8.8ms | Allocations: 5126)
+
+
+Started GET "/properties/58" for ::1 at 2023-05-30 22:37:12 +0900
+Processing by PropertiesController#show as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:74:in `set_property'
+  Rendering layout layouts/application.html.erb
+  Rendering properties/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 58], ["record_type", "Property"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/properties/_property.html.erb:24
+  Rendered properties/_property.html.erb (Duration: 28.0ms | Allocations: 4591)
+  Rendered properties/show.html.erb within layouts/application (Duration: 34.5ms | Allocations: 5450)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 5535)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 7.5ms | Allocations: 6843)
+
+
+  
+ActionView::Template::Error (Nil location provided. Can't build URI.):
+    21: 
+    22:   <p>
+    23:     <strong>Avatar:</strong>
+    24:     <%= image_tag property.avatar.representation(resize_to_limit: [100, 100]) %>
+    25:   </p>
+    26: 
+    27:   <p>
+  
+app/views/properties/_property.html.erb:24
+app/views/properties/show.html.erb:3
+Started GET "/" for ::1 at 2023-05-30 22:40:55 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 166)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.46 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-3640bb2a.vue           3.59 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-dbee00d8.vue               6.08 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-6e98f1eb.css        167.38 kB │ gzip:  25.68 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-7eb5596b.js       1,058.06 kB │ gzip: 298.72 kB
+
+✓ built in 2.38s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2580.9ms | Allocations: 7731)
+Completed 200 OK in 2582ms (Views: 2581.6ms | ActiveRecord: 0.0ms | Allocations: 7992)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 22:41:13 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 2270)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:43:11 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-b9cdff37.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-3640bb2a.vue           3.59 kB
+
+../../public/vite-dev/assets/Search-cb8751f5.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-2612a8e5.vue               6.08 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-1038a8d8.css        167.38 kB │ gzip:  25.68 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-0217561b.js       1,058.05 kB │ gzip: 298.70 kB
+
+✓ built in 2.46s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2655.6ms | Allocations: 7496)
+Completed 200 OK in 2657ms (Views: 2656.3ms | ActiveRecord: 0.0ms | Allocations: 7726)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 22:43:23 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 2233)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:47:43 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/AddProperty-49f79148.vue          3.46 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-e089d5ee.vue               6.10 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-90f37ba4.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-622a9cba.js       1,058.44 kB │ gzip: 298.87 kB
+
+✓ built in 2.42s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2620.5ms | Allocations: 7488)
+Completed 200 OK in 2621ms (Views: 2621.0ms | ActiveRecord: 0.0ms | Allocations: 7718)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 22:48:04 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.5ms | Allocations: 2233)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:48:12 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Skipping vite build. Watched files have not changed since the last build at 2023-05-30 22:47:46
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 6830)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 7061)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:52:11 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-82b16860.vue          3.61 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-e089d5ee.vue               6.10 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-b72d51be.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-89631786.js       1,058.56 kB │ gzip: 298.93 kB
+
+✓ built in 2.42s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2619.1ms | Allocations: 7510)
+Completed 200 OK in 2620ms (Views: 2619.5ms | ActiveRecord: 0.0ms | Allocations: 7740)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:52:54 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-00bf4c19.vue          3.62 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-e089d5ee.vue               6.10 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-8b126465.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-1716aee2.js       1,058.57 kB │ gzip: 298.94 kB
+
+✓ built in 2.44s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2621.4ms | Allocations: 7478)
+Completed 200 OK in 2622ms (Views: 2622.0ms | ActiveRecord: 0.0ms | Allocations: 7708)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:53:43 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-5d1cbc44.vue          3.63 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-e089d5ee.vue               6.10 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-7e645128.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-446409df.js       1,058.58 kB │ gzip: 298.94 kB
+
+✓ built in 2.41s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2675.6ms | Allocations: 7495)
+Completed 200 OK in 2677ms (Views: 2676.2ms | Allocations: 7724)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:56:05 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-dfdc78e8.vue          3.62 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-e089d5ee.vue               6.10 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-228a216f.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-6200e553.js       1,058.55 kB │ gzip: 298.91 kB
+
+✓ built in 2.46s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2655.3ms | Allocations: 7483)
+Completed 200 OK in 2656ms (Views: 2656.0ms | Allocations: 7710)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:56:18 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-598484ec.vue          3.61 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-e089d5ee.vue               6.10 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-0382f95f.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-2c2f8704.js       1,058.54 kB │ gzip: 298.91 kB
+
+✓ built in 2.90s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 3131.8ms | Allocations: 7484)
+Completed 200 OK in 3133ms (Views: 3132.3ms | Allocations: 7711)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:57:00 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-7a9b4e6e.vue          3.63 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-e089d5ee.vue               6.10 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-5edd2ada.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-bdfeb669.js       1,058.56 kB │ gzip: 298.92 kB
+
+✓ built in 2.46s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2653.3ms | Allocations: 7487)
+Completed 200 OK in 2654ms (Views: 2653.8ms | Allocations: 7714)
+
+
+Started GET "/" for ::1 at 2023-05-30 22:58:46 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-3788b2f0.vue      2.10 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-03afaa00.vue               6.13 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-3e4c3518.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-7f91519c.js       1,058.64 kB │ gzip: 298.96 kB
+
+✓ built in 3.05s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 3243.4ms | Allocations: 7487)
+Completed 200 OK in 3244ms (Views: 3243.8ms | Allocations: 7714)
+
+
+Started POST "/properties" for ::1 at 2023-05-30 22:59:55 +0900
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"title"=>"sfg", "price"=>"234", "rooms"=>"2", "bathrooms"=>"2", "account_id"=>"8", "latitude"=>"", "longitude"=>"", "address"=>"Izumo, Enyachou"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+  [1m[36mAccount Load (1.9ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+Completed 422 Unprocessable Entity in 2286ms (Views: 2.3ms | ActiveRecord: 8.8ms | Allocations: 9348)
+
+
+Started POST "/properties" for ::1 at 2023-05-30 23:00:52 +0900
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"title"=>"sfg", "price"=>"234", "rooms"=>"2", "bathrooms"=>"2", "account_id"=>"8", "latitude"=>"", "longitude"=>"", "address"=>"Izumo, Enyachou"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/properties_controller.rb:37:in `create'
+Completed 422 Unprocessable Entity in 1930ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 6103)
+
+
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT "accounts".* FROM "accounts" ORDER BY "accounts"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2023-05-30 23:05:09 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-b6d62726.vue                  0.92 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-03afaa00.vue               6.13 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-3e4c3518.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-c0e06b3d.js       1,058.68 kB │ gzip: 298.96 kB
+
+✓ built in 2.44s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2644.1ms | Allocations: 7502)
+Completed 200 OK in 2645ms (Views: 2644.9ms | ActiveRecord: 0.0ms | Allocations: 7732)
+
+
+Started POST "/properties" for ::1 at 2023-05-30 23:05:30 +0900
+Processing by PropertiesController#create as HTML
+  Parameters: {"property"=>{"title"=>"my home113", "price"=>"123", "rooms"=>"2", "bathrooms"=>"2", "latitude"=>"", "longitude"=>"", "address"=>"Izumo, Enyachou"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2059ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 4114)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:05:46 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.8ms | Allocations: 2290)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:07:18 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 143)
+Skipping vite build. Watched files have not changed since the last build at 2023-05-30 23:05:12
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 6820)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 7050)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:07:29 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.8ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.8ms | Allocations: 2233)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:08:25 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-03afaa00.vue               6.13 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-3e4c3518.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-f74f7070.js       1,058.73 kB │ gzip: 298.97 kB
+
+✓ built in 3.67s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 3870.2ms | Allocations: 7500)
+Completed 200 OK in 3871ms (Views: 3870.7ms | ActiveRecord: 0.0ms | Allocations: 7731)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:08:40 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2233)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:08:46 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2233)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:09:51 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-0d9bc9c7.vue               6.14 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-604086af.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-e866b203.js       1,058.73 kB │ gzip: 298.98 kB
+
+✓ built in 4.48s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 4674.1ms | Allocations: 7505)
+Completed 200 OK in 4675ms (Views: 4674.6ms | ActiveRecord: 0.0ms | Allocations: 7735)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:10:05 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 2233)
+
+
+Started GET "/vite-dev/assets/application-6496162e.css" for ::1 at 2023-05-30 23:12:28 +0900
+Started GET "/vite-dev/assets/application-51dabfca.js" for ::1 at 2023-05-30 23:12:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/vite-dev/assets/application-6496162e.css"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/vite-dev/assets/application-51dabfca.js"):
+  
+Started GET "/" for ::1 at 2023-05-30 23:13:30 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 156)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-ff220710.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-3160a965.vue               6.16 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-25399145.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-4594da52.js       1,058.75 kB │ gzip: 298.98 kB
+
+✓ built in 2.37s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2571.6ms | Allocations: 7680)
+Completed 200 OK in 2572ms (Views: 2572.2ms | ActiveRecord: 0.0ms | Allocations: 7955)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:13:44 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.5ms | Allocations: 2329)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:16:38 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2233)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:16:40 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 2233)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:16:58 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-b1a9ff4b.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-79e44087.vue               5.96 kB
+
+../../public/vite-dev/assets/Houses-3160a965.vue               6.16 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-3156db23.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-16af1ca2.js       1,058.75 kB │ gzip: 298.98 kB
+
+✓ built in 2.51s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2709.6ms | Allocations: 7484)
+Completed 200 OK in 2710ms (Views: 2710.1ms | ActiveRecord: 0.0ms | Allocations: 7714)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:17:42 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.6ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 2233)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:17:51 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.7ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.7ms | Allocations: 2233)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:19:54 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-b1a9ff4b.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-b63f779e.vue               5.97 kB
+
+../../public/vite-dev/assets/Houses-3160a965.vue               6.16 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-2707a978.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-513e8cae.js       1,058.75 kB │ gzip: 298.98 kB
+
+✓ built in 2.46s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2647.4ms | Allocations: 7493)
+Completed 200 OK in 2648ms (Views: 2647.8ms | ActiveRecord: 0.0ms | Allocations: 7723)
+
+
+Started GET "/properties" for ::1 at 2023-05-30 23:20:18 +0900
+Processing by PropertiesController#index as HTML
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT "properties".* FROM "properties"[0m
+  ↳ app/controllers/properties_controller.rb:9:in `index'
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms | Allocations: 2233)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:22:55 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-b1a9ff4b.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-c6e9d944.vue               6.00 kB
+
+../../public/vite-dev/assets/Houses-3160a965.vue               6.16 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-54669f49.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-251c1c4b.js       1,058.80 kB │ gzip: 299.00 kB
+
+✓ built in 2.54s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2747.7ms | Allocations: 7472)
+Completed 200 OK in 2749ms (Views: 2748.4ms | ActiveRecord: 0.0ms | Allocations: 7702)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:24:03 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-b1a9ff4b.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-01a1fdcd.vue               6.03 kB
+
+../../public/vite-dev/assets/Houses-3160a965.vue               6.16 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-15ab0688.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-adb3f603.js       1,058.85 kB │ gzip: 299.01 kB
+
+✓ built in 3.23s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 3445.6ms | Allocations: 7499)
+Completed 200 OK in 3447ms (Views: 3446.2ms | ActiveRecord: 0.0ms | Allocations: 7729)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:25:44 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-b1a9ff4b.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-58050d7b.vue               5.97 kB
+
+../../public/vite-dev/assets/Houses-3160a965.vue               6.16 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-4f8b148c.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-e9cd9941.js       1,058.86 kB │ gzip: 299.02 kB
+
+✓ built in 2.51s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2725.4ms | Allocations: 7515)
+Completed 200 OK in 2726ms (Views: 2725.9ms | Allocations: 7744)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:27:45 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-b1a9ff4b.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-75074d5d.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-b0ce0ead.vue               6.02 kB
+
+../../public/vite-dev/assets/Houses-3160a965.vue               6.16 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-863695f9.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-703abd74.js       1,058.91 kB │ gzip: 299.03 kB
+
+✓ built in 2.50s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2713.0ms | Allocations: 7494)
+Completed 200 OK in 2714ms (Views: 2713.5ms | Allocations: 7722)
+
+
+Started GET "/" for ::1 at 2023-05-30 23:30:00 +0900
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 143)
+Building with Vite ⚡️
+vite v4.3.9 building for development...
+
+transforming...
+
+✓ 153 modules transformed.
+
+rendering chunks...
+
+computing gzip size...
+
+../../public/vite-dev/assets/logo-da9b9095.svg                 0.31 kB │ gzip:   0.21 kB
+
+../../public/vite-dev/assets/App-62bb1a8f.vue                  0.99 kB
+
+../../public/vite-dev/manifest-assets.json                     1.24 kB │ gzip:   0.30 kB
+
+../../public/vite-dev/assets/Modal-3ac0c0b4.vue                1.62 kB
+
+../../public/vite-dev/manifest.json                            1.72 kB │ gzip:   0.45 kB
+
+../../public/vite-dev/assets/searchButton-7842259c.vue         1.94 kB
+
+../../public/vite-dev/assets/AddPropertyForm-441f010c.vue      1.97 kB
+
+../../public/vite-dev/assets/TheWelcome-b1a9ff4b.vue           3.60 kB
+
+../../public/vite-dev/assets/AddProperty-ef3b0192.vue          3.66 kB
+
+../../public/vite-dev/assets/Search-b0ce0ead.vue               6.02 kB
+
+../../public/vite-dev/assets/Houses-3160a965.vue               6.16 kB
+
+../../public/vite-dev/assets/base-f3c22fc4.css                 1.70 kB │ gzip:   0.63 kB
+
+../../public/vite-dev/assets/main-cbf0b3e0.css                 1.77 kB │ gzip:   0.67 kB
+
+../../public/vite-dev/assets/application-503db2de.css        167.98 kB │ gzip:  25.75 kB
+
+../../public/vite-dev/assets/map-e912c496.js                   0.79 kB │ gzip:   0.43 kB
+
+../../public/vite-dev/assets/application-14604f2a.js       1,058.91 kB │ gzip: 299.03 kB
+
+✓ built in 2.49s
+
+Build with Vite complete: /home/hime/baregit/vuerails/public/vite-dev
+
+(!) Some chunks are larger than 500 kBs after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+
+  Rendered layout layouts/application.html.erb (Duration: 2674.2ms | Allocations: 7490)
+Completed 200 OK in 2675ms (Views: 2674.9ms | Allocations: 7717)
+
+

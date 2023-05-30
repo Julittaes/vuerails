@@ -1,11 +1,18 @@
 <template>
   <div class="main">
-    <div class="col-4">
-      <h1> Add house </h1>
-      <h3>General</h3>
-      <AddPropertyForm ref="form" :location="location"/>
-      <Search :map="map" :center="center" @set-marker='setMarker' @found-places="showMarkers" @location-input="locationInput"/>
-      <button type="submit" class="btn btn-primary btn-lg btn-block mt-5" @click="submitForm">Submit</button>
+    <div class="col-4 py-3">
+      <div>
+        <div class="d-flex justify-content-between align-items-center">
+          <h1> Add house </h1>
+          <button class="btn btn-outline-info" @click="$emit('show-houses')">See all houses</button>
+        </div>
+
+        <h3>General</h3>
+        <AddPropertyForm ref="form" :location="location" />
+        <Search :map="map" :center="center" @set-marker='setMarker' @found-places="showMarkers"
+          @location-input="locationInput" />
+        <button type="submit" class="btn btn-primary btn-lg btn-block mt-3" @click="submitForm">Submit</button>
+      </div>
     </div>
     <div class="map-wrapper">
       <div id="map"></div>
@@ -54,22 +61,6 @@ export default {
           marker: false,
         });
 
-        this.map.addControl(geocoder);
-
-        // geocoder.on("result", (e) => {
-        //   const marker = new mapboxgl.Marker({
-        //     draggable: true,
-        //     color: "#D80739",
-        //   })
-        //     .setLngLat(e.result.center)
-        //     .addTo(this.map);
-        //   this.marker = marker;
-        //   this.center = e.result.center;
-
-        //   marker.on("dragend", (e) => {
-        //     this.center = Object.values(e.target.getLngLat());
-        //   });
-        // });
       } catch (err) {
         console.log("map error", err);
       }
@@ -77,13 +68,12 @@ export default {
     submitForm() {
       this.$refs.form.submit();
     },
-    showMarkers({type, data}) {
+    showMarkers({ type, data }) {
       console.log('addproperty');
-      // const id = Date.now();
-      let color = 'red';
+      let color = 'blue';
       switch (type) {
         case 'hospitals':
-          color = 'blue';
+          color = 'red';
           break;
         case 'clinics':
           color = 'green';
@@ -103,7 +93,7 @@ export default {
             "features": data.features,
           },
         });
-              // Add a layer showing the places.
+        // Add a layer showing the places.
         this.map.addLayer({
           'id': type,
           'type': 'circle',
@@ -121,25 +111,25 @@ export default {
       }
     },
     setMarker(center) {
-      if(this.marker) this.marker.remove();
+      if (this.marker) this.marker.remove();
       const marker = new mapboxgl.Marker({
-            draggable: true,
-            color: "#D80739",
-          })
+        draggable: true,
+        color: "#D80739",
+      })
         .setLngLat(center)
         .addTo(this.map);
 
-        marker.on("dragend", (e) => {
-            this.center = Object.values(e.target.getLngLat());
-            console.log('center changed welcome', this.center);
-          });
+      marker.on("dragend", (e) => {
+        this.center = Object.values(e.target.getLngLat());
+        console.log('center changed welcome', this.center);
+      });
 
       this.marker = marker;
       this.center = center;
       this.map.flyTo({
         center: center,
         speed: 0.2,
-    });
+      });
     },
   }
 }
@@ -147,7 +137,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .main {
   display: flex;
 }

@@ -1,42 +1,44 @@
 <template>
-    <!-- Coordinates Display here -->
-    <div class="dislpay-arena">
-      <div class="coordinates-header">
-        <h3>Location</h3>
-        <p class="font-italic">Your address will not be displayed to others. Check you location rating!</p>
+  <!-- Coordinates Display here -->
+  <div class="dislpay-arena">
+    <div class="coordinates-header">
+      <h3>Location</h3>
+      <p class="font-italic">Your address will not be displayed to others.</p>
 
-        <div class="form-group">
-          <label for="address">Address</label>
-          <input type="text" class="form-control location-control my-2" id="address" v-model="location"
-            @input="locationInput" />
-          <SearchButton v-if="locationFound && !addressEdited" :access-token="access_token" :current-location="center"
-            @found-places="showMarkers" />
-          <button v-if="addressEdited" type="button" class="btn btn-outline-info" @click="searchLngLat">
-            Show my house on the map!
-          </button>
-          <!-- <button type="button" :disabled="loading" :class="{ disabled: loading }" class="location-btn"
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control location-control my-2" id="address" v-model="location"
+          @input="locationInput" />
+        <button v-if="addressEdited" type="button" class="btn btn-outline-info" @click="searchLngLat">
+          Show my house on the map!
+        </button>
+        <!-- <button type="button" :disabled="loading" :class="{ disabled: loading }" class="location-btn"
             @click="getLocation">
             Get Location
           </button> -->
-          
-          <button type="button" v-if="locationFound && !addressEdited" :disabled="loading" :class="{ disabled: loading }"
-            class="btn btn-outline-info m-1" @click="toggleEditPosition">
-            {{ btnEditPositionText }}
-          </button>
-          <small v-if="editPositionFlg">Move marker</small>
-        </div>
-        <p v-if="locationFound && searchedFlg && !addressEdited">
-          <span class="badge badge-primary m-1">elementary schools: {{ count.elemSchools }}</span>
-          <!-- <span class="badge badge-secondary">Secondary</span>
+
+        <button type="button" v-if="locationFound && !addressEdited" :disabled="loading" :class="{ disabled: loading }"
+          class="btn btn-outline-info m-1" @click="toggleEditPosition">
+          {{ btnEditPositionText }}
+        </button>
+        <span class="ml-1 font-italic" v-if="editPositionFlg">Move marker</span>
+      </div>
+      <h4>Places nearby</h4>
+      <p class="font-italic">Check you location rating!</p>
+      <SearchButton :disabled="!locationFound || addressEdited" :access-token="access_token" :current-location="center"
+        @found-places="showMarkers" />
+      <p class="mt-1" v-if="locationFound && searchedFlg && !addressEdited">
+        <span class="text-lg badge badge-primary m-1">elementary schools: {{ count.elemSchools }}</span>
+        <!-- <span class="badge badge-secondary">Secondary</span>
           <span class="badge badge-success">Success</span> -->
-          <span class="badge badge-danger m-1">hospital: {{ count.hospitals }}</span>
-          <span class="badge badge-warning m-1">clinics: {{ count.clinics }}</span>
-          <!-- <span class="badge badge-info">Info</span>
+        <span class="text-lg badge badge-danger m-1">hospital: {{ count.hospitals }}</span>
+        <span class="text-lg badge badge-warning m-1">clinics: {{ count.clinics }}</span>
+        <!-- <span class="badge badge-info">Info</span>
           <span class="badge badge-light">Light</span>
           <span class="badge badge-dark">Dark</span> -->
-        </p>
-      </div>
+      </p>
     </div>
+  </div>
 </template>
 
 <script>
@@ -87,7 +89,7 @@ export default {
   methods: {
     locationInput(event) {
       this.addressEdited = true
-      this.$emit('location-input', event);
+      this.$emit('location-input', event.target.value);
     },
     toggleEditPosition() {
       if (this.editPositionFlg) {
@@ -175,7 +177,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .main {
   display: flex;
 }
