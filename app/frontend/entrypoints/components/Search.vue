@@ -27,18 +27,7 @@
       <SearchButton :disabled="!locationFound || addressEdited" :access-token="access_token" :current-location="center"
         @found-places="showMarkers" />
         <div v-if="locationFound && searchedFlg && !addressEdited">
-      <p class="mt-1">
-        <span class="text-lg badge badge-primary m-1">elementary schools: {{ count.elemSchools }}</span>
-        <!-- <span class="badge badge-secondary">Secondary</span>-->
-          <span class="text-lg badge badge-warning m-1">konbini: {{ count.konbini }}</span>
-        <span class="text-lg badge badge-danger m-1">hospitals: {{ count.hospitals }}</span>
-        <span class="text-lg badge badge-success m-1">clinics: {{ count.clinics }}</span>
-        <span class="text-lg badge badge-info m-1">kindergardens: {{ count.kindergardens }}</span>
-        <!-- <span class="badge badge-info">Info</span>
-          <span class="badge badge-light">Light</span>
-          <span class="badge badge-dark">Dark</span> -->
-      </p>
-      <h6>Average rating: {{ rating }} / 10</h6>
+      <Rating :count="count"/>
     </div>
     </div>
   </div>
@@ -49,11 +38,13 @@ import axios from "axios";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import SearchButton from './searchButton.vue';
+import Rating from "./Rating.vue";
 
 export default {
   props: ['map', 'center'],
   components: {
     SearchButton,
+    Rating,
   },
   data() {
     return {

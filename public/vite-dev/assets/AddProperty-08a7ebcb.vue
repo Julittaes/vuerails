@@ -164,5 +164,6 @@ export default {
 
 .sidebar {
   overflow-y: auto;
+  /* width:500px; */
 }
 </style>

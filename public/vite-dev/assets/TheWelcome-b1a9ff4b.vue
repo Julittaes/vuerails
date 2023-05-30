@@ -55,7 +55,7 @@ export default {
 
         thisVue.map.flyTo({
                 ...izumo, // Fly to the selected target
-                duration: 5000, // Animate over 12 seconds
+                duration: 15000, // Animate over 12 seconds
                 essential: true // This animation is considered essential with
                 //respect to prefers-reduced-motion
             });

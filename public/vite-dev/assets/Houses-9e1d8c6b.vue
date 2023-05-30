@@ -1,11 +1,11 @@
 <template>
     <div class="main">
-        <div class="sidebar p-1">
+        <div class="sidebar col-4 py-1">
             <div>
                 <button class="btn btn-block btn-primary my-1" @click="$emit('add-house')">Add my house</button>
             </div>
             <div class="list-group">
-                <a class="list-group-item list-group-item-action flex-column align-items-start"  v-for="house in renderedHouses">
+                <a class="list-group-item list-group-item-action flex-column align-items-start"  v-for="house in renderedHouses" @click="$emit('show-house', house)">
                     <div class="d-flex w-100 justify-content-between align-items-center">
                         <h5 class="mb-1">{{ house.title }}</h5>
                         <h4 class="badge badge-secondary ml-1">{{ house.rating }}</h4>
@@ -185,7 +185,7 @@ export default {
 
 .sidebar {
     overflow: auto;
-    max-width: 400px;
+    /* width: 500px; */
     height: 100vh;
 }
 

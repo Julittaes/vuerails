@@ -2,18 +2,22 @@
 import TheWelcome from "./components/TheWelcome.vue";
 import Houses from "./components/Houses.vue";
 import AddProperty from "./components/AddProperty.vue";
+import Property from "./components/Property.vue"
 
 export default {
   components: {
     TheWelcome,
     Houses,
-    AddProperty
+    AddProperty,
+    Property
   },
   data() {
     return {
       showHousesPage: false,
       showAddHouse: false,
-      showWelcome: true
+      showWelcome: true,
+      showOneHouse: false,
+      currentHouse: null,
     };
   },
   methods: {
@@ -21,12 +25,20 @@ export default {
       this.showHousesPage = true;
       this.showWelcome = false;
       this.showAddHouse = false;
+      this.showOneHouse = false;
     },
     addHouse() {
       this.showAddHouse = true;
       this.showWelcome = false;
       this.showHousesPage = false;
     },
+    showHouse(house) {
+      this.currentHouse = house;
+      this.showAddHouse = false;
+      this.showWelcome = false;
+      this.showHousesPage = false;
+      this.showOneHouse = true;
+    }
   }
 }
 </script>
@@ -36,10 +48,11 @@ export default {
 
     <main>
       <TheWelcome v-if='showWelcome' @show-houses="showHouses" @add-house="addHouse"/>
-      <Houses v-if='showHousesPage' @add-house="addHouse">
+      <Houses v-if='showHousesPage' @add-house="addHouse" @show-house="showHouse">
       </Houses>
       <AddProperty v-if='showAddHouse' @show-houses="showHouses">
       </AddProperty>
+      <Property v-if='showOneHouse && currentHouse' :house="currentHouse" @show-houses="showHouses"></Property>
 
     </main>
   </div>
