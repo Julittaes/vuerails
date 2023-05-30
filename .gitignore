@@ -1,0 +1,4 @@
+log/development.log
+public/vite-dev/manifest-assets.json
+public/vite-dev/manifest.json
+tmp/cache/vite/last-build-development.json

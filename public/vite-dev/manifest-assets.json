@@ -1,18 +1,34 @@
 {
   "entrypoints/App.vue": {
-    "file": "assets/App-e0178027.vue",
+    "file": "assets/App-f8dca067.vue",
     "src": "entrypoints/App.vue"
   },
   "entrypoints/assets/logo.svg": {
     "file": "assets/logo-da9b9095.svg",
     "src": "entrypoints/assets/logo.svg"
   },
+  "entrypoints/components/AddProperty.vue": {
+    "file": "assets/AddProperty-09440dfb.vue",
+    "src": "entrypoints/components/AddProperty.vue"
+  },
+  "entrypoints/components/Houses.vue": {
+    "file": "assets/Houses-90e10644.vue",
+    "src": "entrypoints/components/Houses.vue"
+  },
+  "entrypoints/components/Modal.vue": {
+    "file": "assets/Modal-1ca1deff.vue",
+    "src": "entrypoints/components/Modal.vue"
+  },
   "entrypoints/components/TheSidebar.vue": {
-    "file": "assets/TheSidebar-31e051db.vue",
+    "file": "assets/TheSidebar-b38d24d4.vue",
     "src": "entrypoints/components/TheSidebar.vue"
   },
+  "entrypoints/components/TheWelcome copy.vue": {
+    "file": "assets/TheWelcome copy-ddfca6f2.vue",
+    "src": "entrypoints/components/TheWelcome copy.vue"
+  },
   "entrypoints/components/TheWelcome.vue": {
-    "file": "assets/TheWelcome-5124b1e1.vue",
+    "file": "assets/TheWelcome-dd26468f.vue",
     "src": "entrypoints/components/TheWelcome.vue"
   },
   "entrypoints/components/searchButton.vue": {

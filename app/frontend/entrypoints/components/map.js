@@ -1,45 +1,54 @@
-export default function initMap(token) {
+export default function initMap(token, type, flyendCallback) {
     console.log(token);
     mapboxgl.accessToken = token;
-    const map = new mapboxgl.Map({
+    let options = {
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v12',
         projection: 'globe', // Display the map as a globe, since satellite-v9 defaults to Mercator
         zoom: 1.5,
         center: [130, 40]
-    });
-
-    const izumo = {
-        center: [132.7445942, 35.3665752],
-        zoom: 12.5,
-        bearing: 90,
-        pitch: 80
     };
+    if (type === 'streets') {
+        options = {
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            zoom: 12,
+            center: [132.7445942, 35.3665752]
+        };
+    }
+    const map = new mapboxgl.Map(options);
 
-    const topView = {
-        center: [132.7445942, 35.3665752],
-        zoom: 12.5,
-        bearing: 0,
-        pitch: 0
-    };
+    // const izumo = {
+    //     center: [132.7445942, 35.3665752],
+    //     zoom: 12.5,
+    //     bearing: 90,
+    //     pitch: 80
+    // };
 
-    // let isAtStart = true;
+    // const topView = {
+    //     center: [132.7445942, 35.3665752],
+    //     zoom: 12.5,
+    //     bearing: 0,
+    //     pitch: 0
+    // };
+
+    // // let isAtStart = true;
  
-    document.getElementById('fly').addEventListener('click', () => {
-    // depending on whether we're currently at point a or b,
-    // aim for point a or b
-    // const target = isAtStart ? end : start;
-    // isAtStart = !isAtStart;
+    // document.getElementById('fly').addEventListener('click', () => {
+    // // depending on whether we're currently at point a or b,
+    // // aim for point a or b
+    // // const target = isAtStart ? end : start;
+    // // isAtStart = !isAtStart;
 
-        map.flyTo({
-            ...izumo, // Fly to the selected target
-            duration: 5000, // Animate over 12 seconds
-            essential: true // This animation is considered essential with
-            //respect to prefers-reduced-motion
-        });
+    //     map.flyTo({
+    //         ...izumo, // Fly to the selected target
+    //         duration: 5000, // Animate over 12 seconds
+    //         essential: true // This animation is considered essential with
+    //         //respect to prefers-reduced-motion
+    //     });
 
-        event.target.style.display = 'none';
-    });
+    //     event.target.style.display = 'none';
+    // });
 
     map.on('style.load', () => {
         map.setFog({}); // Set the default atmosphere style
@@ -106,6 +115,9 @@ export default function initMap(token) {
         spinGlobe();
     });
 
+    map.on('pitchend', () => {
+        flyendCallback();
+    });
 
     spinGlobe();
     return map;
