@@ -5,7 +5,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties
   def index
-    @properties = Property.all
+    @properties = Property.all.sort_by {|pr| pr.rating}.reverse
     render json: @properties
   end
 

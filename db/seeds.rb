@@ -24,7 +24,8 @@ Property.create!([{
   bathrooms: 1,
   address: "1690-4 Imaichichō, Izumo, Shimane 693-0001",
   fake_latitude: 35.3614928,
-  fake_longitude: 132.7588458
+  fake_longitude: 132.7588458,
+  rating: 7.9
   # account_id: Account.first.id
 }])
 # Property.last.save
@@ -35,7 +36,8 @@ Property.create([{
   bathrooms: 1,
   address: "Tenjincho, Izumo, Shimane 693-0005",
   fake_latitude: 35.3650468,
-  fake_longitude: 132.7420556
+  fake_longitude: 132.7420556,
+  rating: 7.7
   # account_id: Account.first.id
 }])
 # Property.last.save
@@ -46,7 +48,8 @@ Property.create([{
   bathrooms: 2,
   address: "Yanocho, Izumo, Shimane 693-0058",
   fake_latitude: 35.37891,
-  fake_longitude: 132.737748
+  fake_longitude: 132.737748,
+  rating: 9.1
   # account_id: Account.first.id
 }])
 # Property.last.save
@@ -57,7 +60,8 @@ Property.create([{
   bathrooms: 1,
   address: "Hiranocho, Izumo, Shimane 693-0065",
   fake_latitude: 35.39185,
-  fake_longitude: 132.742554
+  fake_longitude: 132.742554,
+  rating: 7.1
   # account_id: Account.first.id
 }])
 # Property.last.save
@@ -68,7 +72,8 @@ Property.create([{
   bathrooms: 2,
   address: "Taishacho Kizukinishi, Izumo, Shimane 699-0751",
   fake_latitude: 35.382282,
-  fake_longitude: 132.674817
+  fake_longitude: 132.674817,
+  rating: 8.1
   # account_id: Account.first.id
 }])
 # Property.last.save
@@ -79,7 +84,8 @@ Property.create([{
   bathrooms: 1,
   address: "Shimane, Izumo, Taishacho Nakaaraki",
   fake_latitude: 35.379698,
-  fake_longitude: 132.692814
+  fake_longitude: 132.692814,
+  rating: 7.9
   # account_id: Account.first.id
 }])
 # Property.last.save
@@ -90,7 +96,8 @@ Property.create([{
   bathrooms: 1,
   address: "447 Koryocho Sanbu, Izumo, Shimane",
   fake_latitude: 35.308655,
-  fake_longitude: 132.683462
+  fake_longitude: 132.683462,
+  rating: 8.7
   # account_id: Account.first.id
 }])
 # Property.last.save
@@ -101,7 +108,8 @@ Property.create([{
   bathrooms: 2,
   address: "2577-12 Jinzaiokicho, Izumo, Shimane",
   fake_latitude: 35.3341155,
-  fake_longitude: 132.6967187
+  fake_longitude: 132.6967187,
+  rating: 9.1
   # account_id: Account.first.id
 }])
 # Property.last.save
@@ -112,7 +120,8 @@ Property.create([{
   bathrooms: 2,
   address: "157 Koshicho, Izumo, Shimane",
   fake_latitude: 35.32898,
-  fake_longitude: 132.749879
+  fake_longitude: 132.749879,
+  rating: 8.2
   # account_id: Account.first.id
 }])
 
@@ -123,7 +132,8 @@ Property.create([{
   bathrooms: 1,
   address: "1175-1 Kandocho, Izumo, Shimane",
   fake_latitude: 35.33939,
-  fake_longitude: 132.71363
+  fake_longitude: 132.71363,
+  rating: 8.4
   # account_id: Account.first.id
 }])
 
@@ -134,7 +144,8 @@ Property.create([{
   bathrooms: 2,
   address: "699-0701 Shimane, Izumo, Taishacho Kizukihigashi",
   fake_latitude: 35.4032228,
-  fake_longitude: 132.6833164
+  fake_longitude: 132.6833164,
+  rating: 8.2
   # account_id: Account.first.id
 }])
 
