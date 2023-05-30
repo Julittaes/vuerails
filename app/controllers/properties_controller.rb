@@ -2,7 +2,6 @@ require 'http'
 
 class PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show edit update destroy ]
-  after_action :set_fake_coordinate, only: %i[ create ]
 
   # GET /properties
   def index
@@ -35,8 +34,8 @@ class PropertiesController < ApplicationController
 
   # POST /properties
   def create
-    @property = Property.new(property_params)
-
+    @property = Property.create(property_params)
+    set_fake_coordinate
     if @property.save
       # redirect_to @property, notice: "Property was successfully created."
       render json: @property, status: :created, location: @property
@@ -77,6 +76,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:title, :price, :rooms, :bathrooms, :avatar, :address, :longitude, :latitude, :account_id)
+      params.require(:property).permit(:title, :price, :rooms, :bathrooms, :avatar, :address, :longitude, :latitude, :fake_latitude, :fake_longitude, :account_id)
     end
 end
